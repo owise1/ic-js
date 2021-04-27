@@ -24,3 +24,33 @@ Intelligence Collective
 
 ### ic.db()
 > return underlying db (orbitDB)
+
+
+## IC Exchange Format
+
+#### Special Characters for first position of a line
+* `#` comment
+* `_` will be followed by a `Perspective Id`. Data from here pertains to this perspective
+* *No Special Character* what we will be tagging
+* `+` "yes" tag
+* `-` "no" tag
+
+```
+# this is a comment
+# append _ to begin perspective id
+_04916228003157dcfa0dea185fd03906a7e379e6b41a2c00c8e8200a6dc9c497cea0053387a1194d526b48d9f3f5f8448080aca756de8351c2589dc4a9a881014b
+# what we're tagging has no special character
+things i love
+# "yes" tag
++warmth
++my family
+# "no" tag
+-trump
+# when you want to switch to a new tag
+trump
++loser
+# and go back again nbd
+things i love
++good bread
+
+```

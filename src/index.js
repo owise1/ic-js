@@ -1,16 +1,11 @@
 const IPFS = require('ipfs')
-const OrbitDB = require('orbit-db')
-const IpfsClient = require('ipfs-http-client')
+// const IpfsClient = require('ipfs-http-client')
+const IC = require('./ic')
 
 async function main () {
 // Create the first peer
   const ipfs1_config = { repo: './ipfs1' }
   const ipfs1 = await IPFS.create(ipfs1_config)
-
-  // Create the database
-  const orbitdb1 = await OrbitDB.createInstance(ipfs1, { directory: './orbitdb1' })
-  const db1 = await orbitdb1.log('events')
-
   // Create the second peer
   const ipfs2_config = { 
     repo: './ipfs2',
@@ -27,12 +22,21 @@ async function main () {
  }
   const ipfs2 = await IPFS.create(ipfs2_config)
 
-  // Open the first database for the second peer,
-  // ie. replicate the database
-  const orbitdb2 = await OrbitDB.createInstance(ipfs2, { directory: './orbitdb2' })
-  const db2 = await orbitdb2.log(db1.address.toString())
+  const ic = await IC.create({
+    ipfs: ipfs1
+  })
+  console.log(ic);
+  const db1 = ic.db()
 
-  console.log('Making db2 check replica')
+  const ic2 = await IC.create({
+    ipfs: ipfs2,
+    orbitdb: {
+      directory: './orbitdb2',
+      db: ic.db().address.toString()
+    }
+  })
+
+  const db2 = ic2.db()
 
   // When the second database replicated new heads, query the database
   db2.events.on('replicated', () => {

@@ -25,6 +25,11 @@ Intelligence Collective
 ### ic.db()
 > return underlying db (orbitDB)
 
+## Events
+
+### 'data'
+> when new data arrives
+
 
 ## IC Exchange Format
 

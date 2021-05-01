@@ -7,14 +7,20 @@ Intelligence Collective
 
 ## Public Instance Methods
 
-### ic.tag(dId, from, to)
-> creates a tag
+### ic.tag(from, to, yesNo = '+')
+> creates a tag for the perspective
 
 ### all()
 > returns all tags
 
 ### ic.clean(str)
 > utility function to enforce tag string format
+
+The goal is keep a tags as open as possible while limiting inadvertant dupes and keeping them relatively URL safe.
+* Lower case
+* 50 character max
+* remove potentially dangerous characters
+* Remove special characters used in exchange format i.e `_` `#` `-` & `+`
 
 ### ic.import(str)
 > parses IC export format into db
@@ -31,7 +37,7 @@ Intelligence Collective
 > when new data arrives
 
 
-## IC Exchange Format
+## .ice - IC Exchange Format
 
 #### Special Characters for first position of a line
 * `#` comment

@@ -16,7 +16,9 @@
   "standard": {
     "globals": [
       "describe",
-      "it"
+      "it",
+      "before",
+      "after"
     ]
   },
   "dependencies": {

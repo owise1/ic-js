@@ -5,6 +5,8 @@ const IC = require('../src/ic')
 
 describe('Two IC instances', function () {
   let ic1, ic2
+  const to = 'things that make me feel better'
+  const from1 = 'sleep'
   before(async function () {
     this.timeout(5000)
     // Create the first peer
@@ -43,17 +45,53 @@ describe('Two IC instances', function () {
     assert.equal(ic2.db().db, ic1.db().db)
   })
 
-  describe('Adding a tag', function () {
-    it('adds a tag', async function () {
-      await ic1.tag('things that make me feel better', 'sleep')
+  describe('Tags', function () {
+    it('adding a tag', async function () {
+      await ic1.tag(to, from1)
       const all = ic1.all()
       assert.lengthOf(all, 1)
     })
     it('the other instance gets it via "data" event', function (done) {
       this.timeout(3000)
-      ic2.on('data', all => {
+      const fn = all => {
         assert.lengthOf(all, 1)
+        ic2.off('data', fn)
         done()
+      }
+      ic2.on('data', fn)
+    })
+  })
+  describe('Export/Import', function () {
+    let ice, iceLines
+    const noFrom = 'push notifications'
+    before(async function () {
+      await ic1.tag(to, 'finishing a project')
+      await ic1.tag(to, 'swimming in a river')
+      await ic1.tag(to, noFrom, false)
+      ice = ic1.export()
+      iceLines = ice.split("\n")
+    })
+    it('test db has the correct number of entries', function () {
+      assert.lengthOf(ic1.all(), 4)
+    })
+    describe('export', function () {
+      it('is string', function () {
+        assert.ok(typeof ice === 'string')
+      })
+      it('first line is dId', function () {
+        const regex = new RegExp(`^_${ic1.id}`)
+        assert.ok(regex.test(ice))
+      })
+      it('next line is first "to"', function () {
+        assert.equal(iceLines[1], to)
+      })
+      it('has a correct yes line', function () {
+        const regex = new RegExp(`\\+${from1}`)
+        assert.ok(regex.test(ice))
+      })
+      it('has a correct no line', function () {
+        const regex = new RegExp(`\\-${noFrom}`)
+        assert.ok(regex.test(ice))
       })
     })
   })

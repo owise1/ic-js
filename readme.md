@@ -41,12 +41,20 @@ The goal is keep a tags as open as possible while limiting inadvertant dupes and
 
 ## .ice - IC Exchange Format
 
-#### Special Characters for first position of a line
+#### Special Characters for 
+
+First position in line
+
 * `#` comment
 * `_` will be followed by a `Perspective Id`. Data from here pertains to this perspective - if this is missing, we'll generate one
 * *No Special Character* what we will be tagging
 * `+` "yes" tag
 * `-` "no" tag
+
+End of line
+
+* `,` time
+
 
 ```
 # this is a comment
@@ -55,7 +63,7 @@ _04916228003157dcfa0dea185fd03906a7e379e6b41a2c00c8e8200a6dc9c497cea0053387a1194
 # what we're tagging has no special character
 things i love
 # "yes" tag
-+warmth
++warmth,1620150217594
 +my family
 # "no" tag
 -trump

@@ -4,6 +4,8 @@ Intelligence Collective
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+Connection Collections
+
 
 ## Public Instance Methods
 
@@ -41,7 +43,7 @@ The goal is keep a tags as open as possible while limiting inadvertant dupes and
 
 #### Special Characters for first position of a line
 * `#` comment
-* `_` will be followed by a `Perspective Id`. Data from here pertains to this perspective
+* `_` will be followed by a `Perspective Id`. Data from here pertains to this perspective - if this is missing, we'll generate one
 * *No Special Character* what we will be tagging
 * `+` "yes" tag
 * `-` "no" tag

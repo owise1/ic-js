@@ -37,11 +37,6 @@ describe('Two IC instances', function () {
         db: ic1.db().address.toString()
       }
     })
-    // ic2.db().events.on('replicated', () => {
-    //   const result = ic2.db().iterator({ limit: -1 }).collect().map(e => e.payload.value)
-    //   console.log(result.join('\n'))
-    //   console.log('---');
-    // })
   })
 
   it('have same address', function () {
@@ -54,13 +49,12 @@ describe('Two IC instances', function () {
       const all = ic1.all()
       assert.lengthOf(all, 1)
     })
-    it('the other instance gets it', function (done) {
+    it('the other instance gets it via "data" event', function (done) {
       this.timeout(3000)
-      setTimeout(async () => {
-        const all = ic2.all()
+      ic2.on('data', all => {
         assert.lengthOf(all, 1)
         done()
-      }, 2000)
+      })
     })
   })
 })

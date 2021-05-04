@@ -7,12 +7,16 @@ class IC extends EventEmitter {
   constructor (dId, db) {
     super()
     this._db = db
-    this.id = dId 
+    this.id = dId
+    this._db.events.on('replicated', () => {
+      this.emit('data', this.all())
+    })
   }
   db () {
     return this._db
   }
 
+  // orbitDB dependent method
   load () {
     this._db.load()
   }

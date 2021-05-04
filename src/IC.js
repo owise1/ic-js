@@ -22,13 +22,15 @@ class IC extends EventEmitter {
   }
 
   async tag (to, from, yesNo = '+') {
-    await this._db.add({
+    const tag = {
       from: this.clean(from),
       to: this.clean(to),
       yesNo: !yesNo || yesNo === '-' ? '-' : '+',
       time: new Date().getTime(),
       dId: this.id
-    })
+    }
+    await this._db.add(tag)
+    return tag
   }
 
   all () {

@@ -60,7 +60,7 @@ class IC extends EventEmitter {
   }
 
   async import (str) {
-    const lines = str.split("\n").filter(line => !/^#/.test(line))
+    const lines = str.split("\n").filter(line => !/^#/.test(line) && line)
     let dId = uuidv4()
     let to = null
     return Promise.all(lines.map(async line => {

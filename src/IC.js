@@ -21,14 +21,14 @@ class IC extends EventEmitter {
     this._db.load()
   }
 
-  async tag (to, from, yesNo = '+') {
-    const tag = {
+  async tag (to, from, yesNo = '+', opts = {}) {
+    const tag = Object.assign({
       from: this.clean(from),
       to: this.clean(to),
       yesNo: !yesNo || yesNo === '-' ? '-' : '+',
       time: new Date().getTime(),
       dId: this.id
-    }
+    }, opts)
     await this._db.add(tag)
     return tag
   }
@@ -59,6 +59,27 @@ class IC extends EventEmitter {
     )(byDIds)
   }
 
+  async import (str) {
+    const lines = str.split("\n").filter(line => !/^#/.test(line))
+    let dId = uuidv4()
+    let to = null
+    return Promise.all(lines.map(async line => {
+      if (/^_/.test(line)) {
+        dId = line.replace(/^_/, '') || uuidv4()
+      } else if (/^[+-]/.test(line)) {
+        if (to) {
+          const pieces = line.replace(/^[+-]/, '').split(',')
+          await this.tag(to, pieces[0], !/^-/.test(line), {
+            dId,
+            time: pieces[1] ? parseInt(pieces[1], 10) : null
+          })
+        }
+      } else {
+        to = line
+      }
+    }))
+  }
+
   static async create (opts = {}) {
     const options = mergeDeepRight({
       orbitdb: {
@@ -71,7 +92,9 @@ class IC extends EventEmitter {
     const orbitdb = await OrbitDB.createInstance(options.ipfs, options.orbitdb)
     const dbAddr = options.orbitdb.db || uuidv4()
     const db = await orbitdb.log(dbAddr)
-    return new IC(orbitdb.id, db)
+    const instance = new IC(orbitdb.id, db)
+    instance.orbitdb = orbitdb // used for testing
+    return instance
   }
 }
 

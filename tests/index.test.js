@@ -4,14 +4,14 @@ const IPFS = require('ipfs')
 const IC = require('../src/ic')
 
 describe('Two IC instances', function () {
-  let ic1, ic2
+  let ic1, ic2, ipfs1, ipfs2
   const to = 'things that make me feel better'
   const from1 = 'sleep'
   before(async function () {
     this.timeout(5000)
     // Create the first peer
     const ipfs1_config = { repo: './ipfs1' }
-    const ipfs1 = await IPFS.create(ipfs1_config)
+    ipfs1 = await IPFS.create(ipfs1_config)
     // Create the second peer
     const ipfs2_config = {
       repo: './ipfs2',
@@ -26,7 +26,7 @@ describe('Two IC instances', function () {
         }
       }
     }
-    const ipfs2 = await IPFS.create(ipfs2_config)
+    ipfs2 = await IPFS.create(ipfs2_config)
 
     ic1 = await IC.create({
       ipfs: ipfs1
@@ -60,19 +60,23 @@ describe('Two IC instances', function () {
       }
       ic2.on('data', fn)
     })
+    after(async function () {
+      await ic2.orbitdb.disconnect()
+    })
   })
   describe('Export/Import', function () {
-    let ice, iceLines
+    let ice, iceLines, exportItemCount
     const noFrom = 'push notifications'
     before(async function () {
       await ic1.tag(to, 'finishing a project')
       await ic1.tag(to, 'swimming in a river')
       await ic1.tag(to, noFrom, false)
+      exportItemCount = 4
       ice = ic1.export()
       iceLines = ice.split("\n")
     })
     it('test db has the correct number of entries', function () {
-      assert.lengthOf(ic1.all(), 4)
+      assert.lengthOf(ic1.all(), exportItemCount)
     })
     describe('export', function () {
       it('is string', function () {
@@ -92,6 +96,21 @@ describe('Two IC instances', function () {
       it('has a correct no line', function () {
         const regex = new RegExp(`\\-${noFrom}`)
         assert.ok(regex.test(ice))
+      })
+    })
+    describe('import', function () {
+      before(async function () {
+        ic2 = await IC.create({
+          ipfs: ipfs2
+        })
+      })
+      it('starts with an empty db', function () {
+        assert.lengthOf(ic2.all(), 0)
+      })
+      it('imports', async function () {
+        await ic2.import(ice)
+        assert.lengthOf(ic2.all(), exportItemCount)
+        console.log(ic2.all());
       })
     })
   })

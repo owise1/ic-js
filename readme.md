@@ -69,9 +69,15 @@ things i love
 -trump
 # when you want to switch to a new tag
 trump
-+loser
++huckster
 # and go back again nbd
 things i love
 +good bread
+# _ will begin another perspective (no id necessary)
+_
+things i love
++shots
++bats wings
+-puppy dogs
 
 ```

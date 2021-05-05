@@ -2,10 +2,13 @@
 
 Intelligence Collective
 
++connection collections
++thought maps
++distributed brainstorms
++structured spaces built to aid introspection and imagination
++a database of the subjective
+
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-Connection Collections
-
 
 ## Public Instance Methods
 
@@ -81,3 +84,8 @@ things i love
 -puppy dogs
 
 ```
+
+## Roadmap
+
+* post ice to ipfs
+* private/encrypted groups

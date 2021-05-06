@@ -1,4 +1,4 @@
-# ic-js
+# Intelligence Collective (javascript edition) 
 
 ```
 Intelligence Collective
@@ -8,13 +8,14 @@ Intelligence Collective
 +distributed brainstorms
 +structured spaces built to aid introspection and imagination
 +a database of the subjective
++own and control your most precious "data"
 ```
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Public Instance Methods
 
-### ic.tag(from, to, yesNo = '+')
+### ic.tag(to, from, yesNo = '+')
 > creates a tag for the perspective
 
 ### all()

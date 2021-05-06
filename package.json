@@ -1,7 +1,7 @@
 {
   "name": "ic-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "Intelligence Collective",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/"
@@ -11,7 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.4",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "ipfs": "^0.54.4",
+    "ipfs-http-client": "^49.0.4"
   },
   "standard": {
     "globals": [
@@ -22,8 +24,6 @@
     ]
   },
   "dependencies": {
-    "ipfs": "^0.54.4",
-    "ipfs-http-client": "^49.0.4",
     "orbit-db": "^0.26.1",
     "ramda": "^0.27.1",
     "uuid": "^8.3.2"

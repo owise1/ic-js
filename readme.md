@@ -1,5 +1,6 @@
 # ic-js
 
+```
 Intelligence Collective
 
 +connection collections
@@ -7,6 +8,7 @@ Intelligence Collective
 +distributed brainstorms
 +structured spaces built to aid introspection and imagination
 +a database of the subjective
+```
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

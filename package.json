@@ -2,7 +2,7 @@
   "name": "ic-js",
   "version": "1.0.0",
   "description": "Intelligence Collective",
-  "main": "index.js",
+  "main": "src/IC.js",
   "scripts": {
     "test": "mocha tests/"
   },

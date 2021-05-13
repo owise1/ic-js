@@ -8,9 +8,12 @@ class IC extends EventEmitter {
     super()
     this._db = db
     this.id = dId
-    this._db.events.on('replicated', () => {
+    const emitData = what => {
       this.emit('data', this.all())
-    })
+    }
+    this._db.events.on('replicated', emitData)
+    this._db.events.on('ready', emitData)
+    // this._db.events.on('write', console.log)
   }
   db () {
     return this._db

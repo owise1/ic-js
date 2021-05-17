@@ -30,6 +30,7 @@ Intelligence Collective
 * 50 character max
 
 ### ic.import(str)
+* Remove special leading characters used in exchange format i.e `_` `#` `-` & `+`
 > parses IC export format into db
 
 ### ic.export()

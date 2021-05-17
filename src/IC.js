@@ -44,7 +44,7 @@ class IC extends EventEmitter {
   }
 
   clean (str) {
-    return str.toLowerCase().replace(/[A-Z/\\%#()<>{}[\]:?@!$&*+,;=|^`]/g, '').slice(0, 50)
+    return str.toLowerCase().slice(0, 50)
   }
 
   export () {

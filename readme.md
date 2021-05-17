@@ -9,6 +9,8 @@ Intelligence Collective
 +structured spaces built to aid introspection and imagination
 +a database of the subjective
 +own and control your most precious "data"
++a web of meaning
++OED for thoughts
 ```
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -24,11 +26,8 @@ Intelligence Collective
 ### ic.clean(str)
 > utility function to enforce tag string format
 
-The goal is keep a tags as open as possible while limiting inadvertant dupes and keeping them relatively URL safe.
 * Lower case
 * 50 character max
-* remove potentially dangerous characters
-* Remove special characters used in exchange format i.e `_` `#` `-` & `+`
 
 ### ic.import(str)
 > parses IC export format into db

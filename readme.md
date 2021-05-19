@@ -1,7 +1,4 @@
-# Intelligence Collective (javascript edition) 
-
-```
-Intelligence Collective
+# Intelligence Collective
 
 you know how in your mind you're like "this is like that" and "that is like this"? well, this is like that
 

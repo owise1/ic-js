@@ -43,9 +43,6 @@ class IC extends EventEmitter {
       .map((e) => e.payload.value)
   }
 
-  clean (str) {
-    return str.toLowerCase().slice(0, 50)
-  }
 
   export () {
     const byDIds = groupBy(prop('dId'), this.all())
@@ -82,6 +79,10 @@ class IC extends EventEmitter {
         to = line
       }
     }))
+  }
+
+  static clean (str) {
+    return str.toLowerCase().slice(0, 50)
   }
 
   static async create (opts = {}) {

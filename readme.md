@@ -3,19 +3,20 @@
 ```
 Intelligence Collective
 
-+connection collections
-+thought maps
-+distributed brainstorms
-+structured spaces built to aid introspection and imagination
-+a database of the subjective
-+own and control your most precious "data"
-+a web of meaning
-+OED for thoughts
-```
+you know how in your mind you're like "this is like that" and "that is like this"? well, this is like that
+
+* connection collections
+* thought maps
+* distributed brainstorms
+* structured spaces built to aid introspection and imagination
+* a database of the subjective
+* own and control your most precious "data"
+* a web of meaning
+* OED for thoughts
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Public Instance Methods
+## Methods
 
 ### ic.tag(to, from, yesNo = '+')
 > creates a tag for the perspective
@@ -23,11 +24,6 @@ Intelligence Collective
 ### all()
 > returns all tags
 
-### ic.clean(str)
-> utility function to enforce tag string format
-
-* Lower case
-* 50 character max
 
 ### ic.import(str)
 * Remove special leading characters used in exchange format i.e `_` `#` `-` & `+`
@@ -38,6 +34,17 @@ Intelligence Collective
 
 ### ic.db()
 > return underlying db (orbitDB)
+
+## Static
+
+### IC.clean(str)
+> utility function to enforce tag string format
+
+* Lower case
+* 50 character max
+
+### IC.create(opts)
+> factory function 
 
 ## Events
 

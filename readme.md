@@ -23,7 +23,6 @@ you know how in your mind you're like "this is like that" and "that is like this
 
 
 ### ic.import(str)
-* Remove special leading characters used in exchange format i.e `_` `#` `-` & `+`
 > parses IC export format into db
 
 ### ic.export()
@@ -49,13 +48,13 @@ you know how in your mind you're like "this is like that" and "that is like this
 > when new data arrives
 
 
-## .ice - IC Exchange Format
+## .ic - IC Exchange Format
 
 #### Special Characters for 
 
 First position in line
 
-* `#` comment
+* `//` comment
 * `_` will be followed by a `Perspective Id`. Data from here pertains to this perspective - if this is missing, we'll generate one
 * *No Special Character* what we will be tagging
 * `+` "yes" tag
@@ -67,23 +66,23 @@ End of line
 
 
 ```
-# this is a comment
-# append _ to begin perspective id
+// this is a comment
+// append _ to begin perspective id
 _04916228003157dcfa0dea185fd03906a7e379e6b41a2c00c8e8200a6dc9c497cea0053387a1194d526b48d9f3f5f8448080aca756de8351c2589dc4a9a881014b
-# what we're tagging has no special character
+// what we're tagging has no special character
 things i love
-# "yes" tag
+// "yes" tag
 +warmth,1620150217594
 +my family
-# "no" tag
+// "no" tag
 -trump
-# when you want to switch to a new tag
+// when you want to switch to a new tag
 trump
 +huckster
-# and go back again nbd
+// and go back again nbd
 things i love
 +good bread
-# _ will begin another perspective (no id necessary)
+// _ will begin another perspective (no id necessary)
 _
 things i love
 +shots
@@ -94,5 +93,6 @@ things i love
 
 ## Roadmap
 
+* use in browser and nodejs
 * post ice to ipfs
 * private/encrypted groups

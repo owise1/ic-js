@@ -26,8 +26,8 @@ class IC extends EventEmitter {
 
   async tag (to, from, yesNo = '+', opts = {}) {
     const tag = Object.assign({
-      from: this.clean(from),
-      to: this.clean(to),
+      from: IC.clean(from),
+      to: IC.clean(to),
       yesNo: !yesNo || yesNo === '-' ? '-' : '+',
       time: new Date().getTime(),
       dId: this.id
@@ -61,7 +61,7 @@ class IC extends EventEmitter {
   }
 
   async import (str) {
-    const lines = str.split("\n").filter(line => !/^#/.test(line) && line)
+    const lines = str.split("\n").filter(line => !/^\/\//.test(line) && line)
     let dId = uuidv4()
     let to = null
     return Promise.all(lines.map(async line => {
@@ -82,7 +82,7 @@ class IC extends EventEmitter {
   }
 
   static clean (str) {
-    return str.toLowerCase().slice(0, 50)
+    return str.toLowerCase().replace(/^\/\//, '', str).replace(/^[+-_]/, '', str)
   }
 
   static async create (opts = {}) {

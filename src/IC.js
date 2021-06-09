@@ -82,7 +82,7 @@ class IC extends EventEmitter {
   }
 
   static clean (str) {
-    return str.toLowerCase().replace(/^\/\//, '', str).replace(/^[+-_]/, '', str)
+    return str.toLowerCase().replace(/^\/\//, '', str).replace(/^[_+-]/, '', str)
   }
 
   static async create (opts = {}) {

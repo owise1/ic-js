@@ -4,7 +4,7 @@
   "description": "Intelligence Collective",
   "main": "src/IC.js",
   "scripts": {
-    "test": "mocha tests/"
+    "test": "mocha --exit tests/"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "is-ipfs": "^5.0.0",
     "orbit-db": "^0.26.1",
     "ramda": "^0.27.1",
     "uuid": "^8.3.2"

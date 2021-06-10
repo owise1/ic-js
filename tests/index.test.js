@@ -65,7 +65,7 @@ describe('Two IC instances', function () {
     })
   })
   describe('Export/Import', function () {
-    let ice, iceLines, exportItemCount
+    let ice, iceLines, exportItemCount, exportCid
     const noFrom = 'push notifications'
     before(async function () {
       await ic1.tag(to, 'finishing a project')
@@ -97,6 +97,11 @@ describe('Two IC instances', function () {
         const regex = new RegExp(`\\-${noFrom}`)
         assert.ok(regex.test(ice))
       })
+      it('exports to ipfs', async function () {
+        const res = await ic1.exportToIpfs()
+        exportCid = res.cid.toString()
+        assert.ok(exportCid)
+      })
     })
     describe('import', function () {
       before(async function () {
@@ -110,7 +115,31 @@ describe('Two IC instances', function () {
       it('imports', async function () {
         await ic2.import(ice)
         assert.lengthOf(ic2.all(), exportItemCount)
-        console.log(ic2.all());
+      })
+      it('imports from ipfs', async function () {
+        const what = await ic2.import(exportCid)
+        assert.ok(what)
+      })
+      after(async function () {
+        await ic2.orbitdb.disconnect()
+      })
+    })
+    describe('import from ipfs', function () {
+      before(async function () {
+        ic2 = await IC.create({
+          ipfs: ipfs2
+        })
+      })
+      it('starts with an empty db', function () {
+        assert.lengthOf(ic2.all(), 0)
+      })
+      it('ignores a bad cid', async function () {
+        await ic2.import(exportCid + 'no')
+        assert.lengthOf(ic2.all(), 0)
+      })
+      it('imports from ipfs', async function () {
+        await ic2.import(exportCid)
+        assert.lengthOf(ic2.all(), exportItemCount)
       })
     })
   })

@@ -1,7 +1,8 @@
 const { v4: uuidv4 } = require('uuid')
 const EventEmitter = require('./eventemitter')
 const OrbitDB = require('orbit-db')
-const { join, mergeDeepRight, groupBy, prop, toPairs, pipe, map } = require('ramda')
+const isIPFS = require('is-ipfs')
+const { join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten } = require('ramda')
 
 class IC extends EventEmitter {
   constructor (dId, db) {
@@ -60,8 +61,31 @@ class IC extends EventEmitter {
     )(byDIds)
   }
 
+  async exportToIpfs () {
+    return this.ipfs.add({
+      content: this.export()
+    })
+  }
+
   async import (str) {
     const lines = str.split("\n").filter(line => !/^\/\//.test(line) && line)
+    // import from ipfs
+    if (lines.length === 1 && isIPFS.cid(str)) {
+      for await (const file of this.ipfs.get(str)) {
+        if (!file.content) continue
+        const content = []
+        for await (const chunk of file.content) {
+          content.push(chunk)
+        }
+        const importStr = pipe(
+          map(s => s.toString()),
+          join('')
+        )(content)
+        // should only be on file so return
+        return this.import(importStr)
+      }
+    }
+    // import from string
     let dId = uuidv4()
     let to = null
     return Promise.all(lines.map(async line => {
@@ -82,7 +106,11 @@ class IC extends EventEmitter {
   }
 
   static clean (str) {
-    return str.toLowerCase().replace(/^[_+-]/, '').replace(/^\/\//, '')
+    return str.replace(/^[_+-]/, '').replace(/^\/\//, '')
+  }
+
+  static isValidAddress (address) {
+    return OrbitDB.isValidAddress(address)
   }
 
   static async create (opts = {}) {
@@ -103,7 +131,8 @@ class IC extends EventEmitter {
       }
     })
     const instance = new IC(orbitdb.id, db)
-    instance.orbitdb = orbitdb // used for testing
+    instance.orbitdb = orbitdb
+    instance.ipfs = options.ipfs
     return instance
   }
 }

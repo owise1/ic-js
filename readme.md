@@ -25,8 +25,13 @@ you know how in your mind you're like "this is like that" and "that is like this
 ### ic.import(str)
 > parses IC export format into db
 
+`str` can be `.ic` formatted string *or* ipfs CID containing `.ic` formatted string
+
 ### ic.export()
-> returns IC export of entire db
+> returns IC export of entire db in `.ic` formatted string
+
+### ic.exportToIpfs()
+> returns CID of `.ic` formatted string
 
 ### ic.db()
 > return underlying db (orbitDB)
@@ -36,8 +41,7 @@ you know how in your mind you're like "this is like that" and "that is like this
 ### IC.clean(str)
 > utility function to enforce tag string format
 
-* Lower case
-* 50 character max
+* remove special leading characters `//`, `_`, `+`, `-`
 
 ### IC.create(opts)
 > factory function 
@@ -69,23 +73,22 @@ End of line
 // this is a comment
 // append _ to begin perspective id
 _04916228003157dcfa0dea185fd03906a7e379e6b41a2c00c8e8200a6dc9c497cea0053387a1194d526b48d9f3f5f8448080aca756de8351c2589dc4a9a881014b
-// what we're tagging has no special character
-things i love
-// "yes" tag
-+warmth,1620150217594
-+my family
-// "no" tag
--trump
+// what we're tagging leads with no special character
+things to know about .ic format
++leading plus means "yes"
++tags can be timestamped by appending comma then js time,1620150217594
+// leading minus means "no"
+-harms hippos
 // when you want to switch to a new tag
 trump
 +huckster
 // and go back again nbd
-things i love
-+good bread
+things to know about .ic format
++super flexible
 // _ will begin another perspective (no id necessary)
 _
 things i love
-+shots
++oatmeal raisin cookies
 +bats wings
 -puppy dogs
 
@@ -94,5 +97,4 @@ things i love
 ## Roadmap
 
 * use in browser and nodejs
-* post ice to ipfs
 * private/encrypted groups

@@ -68,9 +68,9 @@ class IC extends EventEmitter {
     )(byDIds)
   }
 
-  async exportToIpfs () {
+  async exportToIpfs (fn) {
     return this.ipfs.add({
-      content: this.export()
+      content: this.export(fn)
     })
   }
 

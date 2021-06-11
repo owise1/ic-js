@@ -27,8 +27,11 @@ you know how in your mind you're like "this is like that" and "that is like this
 
 `str` can be `.ic` formatted string *or* ipfs CID containing `.ic` formatted string
 
-### ic.export()
+### ic.export(fn)
 > returns IC export of entire db in `.ic` formatted string
+
+`fn` can transform/filter tags before they're output
+note flattens tags to most recent
 
 ### ic.exportToIpfs()
 > returns CID of `.ic` formatted string

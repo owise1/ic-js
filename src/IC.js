@@ -2,7 +2,7 @@ const { v4: uuidv4 } = require('uuid')
 const EventEmitter = require('./eventemitter')
 const OrbitDB = require('orbit-db')
 const isIPFS = require('is-ipfs')
-const { join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten } = require('ramda')
+const { reverse, uniqBy, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map } = require('ramda')
 
 class IC extends EventEmitter {
   constructor (dId, db) {
@@ -45,13 +45,20 @@ class IC extends EventEmitter {
   }
 
 
-  export () {
-    const byDIds = groupBy(prop('dId'), this.all())
+  export (fn) {
+    const all = fn ? fn(this.all()) : this.all()
+    const byDIds = groupBy(prop('dId'), all)
+    const cleanTags = pipe(
+      reverse,
+      uniqBy(prop('from')),
+      reverse,
+      map(tag => `${tag.yesNo}${tag.from},${tag.time}`)
+    )
     const formatPerspective = tags => {
       const tagsByTos = groupBy(prop('to'), tags)
       return pipe(
         toPairs,
-        map(arr => `${arr[0]}\n${map(tag => `${tag.yesNo}${tag.from},${tag.time}`, arr[1]).join("\n")}`)
+        map(arr => `${arr[0]}\n${cleanTags(arr[1]).join("\n")}`)
       )(tagsByTos)
     } 
     return pipe(

@@ -52,18 +52,20 @@ class IC extends EventEmitter {
       reverse,
       uniqBy(prop('from')),
       reverse,
-      map(tag => `${tag.yesNo}${tag.from},${tag.time}`)
+      map(tag => `${tag.yesNo}${tag.from},${tag.time}`),
+      join("\n")
     )
     const formatPerspective = tags => {
       const tagsByTos = groupBy(prop('to'), tags)
       return pipe(
         toPairs,
-        map(arr => `${arr[0]}\n${cleanTags(arr[1]).join("\n")}`)
+        map(arr => `${arr[0]}${"\n"}${cleanTags(arr[1])}`),
+        join("\n")
       )(tagsByTos)
     } 
     return pipe(
       toPairs,
-      map(arr => `_${arr[0]}\n${formatPerspective(arr[1])}`),
+      map(arr => `_${arr[0]}${"\n"}${formatPerspective(arr[1])}`),
       join("\n")
     )(byDIds)
   }

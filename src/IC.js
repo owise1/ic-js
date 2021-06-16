@@ -132,7 +132,7 @@ class IC extends EventEmitter {
       throw new Error('You must pass in an IPFS instance')
     }
     const orbitdb = await OrbitDB.createInstance(options.ipfs, options.orbitdb)
-    const dbAddr = options.orbitdb.db || uuidv4()
+    const dbAddr = options.orbitdb.db || options.name || uuidv4()
     const db = await orbitdb.log(dbAddr, {
       sync: true,
       accessController: {

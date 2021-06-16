@@ -65,7 +65,7 @@ class IC extends EventEmitter {
     } 
     return pipe(
       toPairs,
-      map(arr => `_${arr[0]}${"\n"}${formatPerspective(arr[1])}`),
+      map(arr => `_${"\n"}${formatPerspective(arr[1])}`),
       join("\n")
     )(byDIds)
   }

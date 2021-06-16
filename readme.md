@@ -6,10 +6,13 @@ you know how in your mind you're like "this is like that" and "that is like this
 * thought maps
 * distributed brainstorms
 * structured spaces built to aid introspection and imagination
-* a database of the subjective
-* own and control your most precious "data"
+* database of the subjective
+* control your most precious "data"
 * a web of meaning
+* decrentralized text graph
 * OED for thoughts
+
+[more reading](/docs)
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

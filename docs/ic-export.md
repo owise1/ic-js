@@ -1,26 +1,26 @@
 # .ic - IC Protocol 
 
-The IC protocol is a standardized way to share our thoughts. It's mean to be incredibly simple so anyone can contribute and benefit.
+The IC protocol is a standardized way to share our thoughts. It's meant to be incredibly simple so anyone can contribute and benefit.
 
 The following is a valid `.ic`
 ```
-IC is
-+cool
+IC
++so hella siiiick
 ```
 
-#### Special Characters for 
+#### Special Characters
 
 First position in line
 
 * `//` - comment
-* `_` - starts a new perspective. It's not necessary for the first perspective. But if you want to include more than one perspective in a single file use `_` to start a new one.  You can *optionally* follow `_` by a `Perspective Id` if you'd like to tie it to an exisiting persepctive.
-* *No Special Character* what we will be tagging
-* `+` "yes" tag
-* `-` "no" tag
+* `_` - starts a new perspective. It's not necessary for the first perspective. But if you want to include more than one perspective in a single file use `_` to start a new one.  You can *optionally* follow `_` by a `Perspective Id` if your use case requires tying it to an exisiting perspective. In general we dont want to publish our internal ids [though](/docs/privacy.md)
+* *No Special Character* - what we will be decribing 
+* `+` - "yes" / connect
+* `-` - "no" / repel
 
 End of line (optional)
 
-* `,` time
+* `,` time. It's here if you need it, but I'm starting to question this.
 
 
 #### Extended Example

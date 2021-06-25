@@ -1,10 +1,10 @@
 # Intelligence Collective
 
-you know how in your mind you're like "this is like that" and "that is like this"? well, this is like that
+> you know how in your mind you're like "this is like that" and "that is like this"? well, this is like that
 
 connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. database of the subjective. a web of meaning. decrentralized text graph. OED for thoughts
 
-* Intro to [Intelligence Collective](/docs/ic-export.md)
+* Intro to [Intelligence Collective](/docs/intelligence-collective.md)
 * [IC Protocol](/docs/ic-export.md)
 * [Privacy](/docs/privacy.md)
 

@@ -21,7 +21,7 @@ The easiest way to think about it is like tagging. We're kinda tagging `IC is` w
 
 ## Thots
 
-`Thots` are just text, but you can think of them like a digital version of thoughts. They are our thoughts when we put them into a computer. Clearly something is lost, but it's ever so much more efficient. When viewed like so, you see that shorter `thots` will be used to tie huge numbers of things together, similar to how we use tags now.  But as `thots` get longer and/or more idiosyncratic they can be used to connect with like minds. 
+`Thots` are just text, but you can think of them like a digital version of thoughts. They are our thoughts when we put them into a computer. Clearly something is lost, but it's ever so much more efficient. When viewed like so, you see that shorter `thots` will be used to tie huge numbers of things together, similar to how we use tags now.  But as `thots` get longer and/or more idiosyncratic, *and* as the collections of `thots` grow, they can be used to connect like minds, or maybe create them.
 
 Because `thots` are just text *and* so much other stuff online is also just text, `thots` can also represent those online things. For example:
 
@@ -29,6 +29,8 @@ Because `thots` are just text *and* so much other stuff online is also just text
 * `/ipfs/QmckHbjMQTww8UaruK8HMxGv9aMGyx2ynFggqg6wQqs19i` can be assumed to be a file of some kind
 * `https://web.archive.org/web/20070625161555im_/http://www.pantspantspants.biz/top-original.jpg` can be assumed to be an image of some kind (but lets be a little careful with location based urls because the thing that's there could change)
 * `twitter.com` can be assumed to mean whatever's at that link (aim for canonical urls)
+
+Thots are by humans for humans. They are not facts. They are not true. They are not our "digital exhaust". 
 
 
 ## Why would anyone use this?

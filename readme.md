@@ -4,7 +4,7 @@
 
 connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. databases of the subjective. a *web* of meaning. decrentralized text graph. OED for thoughts. a new medium. an alternative demographics based on what we see.
 
-* [Intro](/docs/intelligence-collective.md)
+* [Intro](/docs/ic.md)
 * [IC Protocol](/docs/ic-export.md)
 * [Privacy](/docs/privacy.md)
 

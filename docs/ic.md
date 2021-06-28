@@ -21,6 +21,8 @@ The easiest way to think about it is like tagging. We're kinda tagging `IC is` w
 
 ## Thots
 
+Every new splooge of tech needs a dumb word and this is ours.  But this one is actually good because it sounds the same but it's spelled differently.
+
 `Thots` are just text, but you can think of them like a digital version of thoughts. They are our thoughts when we put them into a computer. Clearly something is lost, but it's ever so much more efficient. When viewed like so, you see that shorter `thots` will be used to tie huge numbers of things together, similar to how we use tags now.  But as `thots` get longer and/or more idiosyncratic, *and* as the collections of `thots` grow, they can be used to connect like minds, or maybe create them.
 
 Because `thots` are just text *and* so much other stuff online is also just text, `thots` can also represent those online things. For example:

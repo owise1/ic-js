@@ -2,13 +2,13 @@
 
 > you know how in your mind you're like "this is like that" and "that is like this"? well, this is like that
 
-connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. databases of the subjective. a *web* of meaning. decrentralized text graph. OED for thoughts. a new medium. an alternative demographics based on what we see.
+connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. databases of the subjective. a *web* of meaning. decrentralized text graph. OED for thoughts. a new medium. an alternative demographics based on what we see. pools not streams.
 
 * [Intro](/docs/ic.md)
 * [IC Protocol](/docs/ic-export.md)
 * [Privacy](/docs/privacy.md)
 
-This is a javascript implementation of IC built on [IPFS](https://ipfs.io/) and [OrbitDB](https://github.com/orbitdb/orbit-db). That means we can do lots of cool things like collaborate and control our ICs. It's effortless to export, share and remix them.
+This is a javascript implementation of IC built on [IPFS](https://ipfs.io/) and [OrbitDB](https://github.com/orbitdb/orbit-db). That means we can do lots of cool things like collaborate and control our ICs. There's no central database. The only people who have it are the ones who use it. It's also effortless to export, share and remix them.
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

@@ -1,6 +1,6 @@
 # .ic - IC Protocol 
 
-The IC protocol is a standardized way to share our thoughts. It's meant to be incredibly simple so anyone can contribute and benefit.
+The IC protocol is a standardized way to share thots. It's meant to be incredibly simple so anyone can contribute and benefit.
 
 The following is a valid `.ic`
 ```

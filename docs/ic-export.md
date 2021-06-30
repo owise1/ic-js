@@ -8,23 +8,23 @@ IC
 +so hella siiiick
 ```
 
+# Structure 
+* newlines separate everything
+* lines with no leading special character define the [thot](/docs/ic.md#Thots) we'll be describing 
+
 #### Special Characters
 
 First position in line
-
-* `//` - comment
-* `_` - starts a new perspective. It's not necessary for the first perspective. But if you want to include more than one perspective in a single file use `_` to start a new one.  You can *optionally* follow `_` by a `Perspective Id` if your use case requires tying it to an exisiting perspective. In general we dont want to publish our internal ids [though](/docs/privacy.md)
-* *No Special Character* - what we will be decribing 
 * `+` - "yes" / connect
 * `-` - "no" / repel
+* `//` - comment
+* `_` - starts a new perspective. It's not necessary for the first perspective. But if you want to include more than one perspective in a single file use `_` to start a new one.  You can *optionally* follow `_` by a `Perspective Id` if your use case requires tying it to an exisiting perspective. In general we dont want to publish our internal ids [though](/docs/privacy.md)
 
 End of line (optional)
 
 * `,` time. It's here if you need it, but I'm starting to question this.
 
-
 #### Extended Example
-
 
 ```
 // this is a comment
@@ -32,11 +32,11 @@ End of line (optional)
 things to know about .ic format
 +leading plus means "yes"
 +tags can be timestamped by appending comma then js time,1620150217594
-// leading minus means "no"
++leading minus means "no"
 -harms hippos
 // when you want to switch to a new tag
 trump
-+huckster
++gone but not forgotten
 // and go back again nbd
 things to know about .ic format
 +super flexible
@@ -44,6 +44,7 @@ things to know about .ic format
 _
 things i love
 +love
++loving things
 -bats wings
 // append _ to begin perspective id
 _0491622800

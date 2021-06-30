@@ -1,8 +1,8 @@
 # Intelligence Collective
 
-> you know how in your mind you're like "this is like that" and "that is like this"? well, this is like that
+> you know sometimes ur like "this is like that" and "that is like this"? well, this is like that
 
-connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. databases of the subjective. a *web* of meaning. decrentralized text graph. OED for thoughts. a new medium. an alternative demographics based on what we see. pools not streams.
+connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. databases of the subjective. a *web* of meaning. decrentralized text graph. OED for thoughts. a new medium. an alternative demographics. pools not streams.
 
 * [Intro](/docs/ic.md)
 * [IC Protocol](/docs/ic-export.md)

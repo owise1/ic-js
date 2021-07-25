@@ -1,6 +1,6 @@
-# .ic - IC Protocol 
+# .ic - The IC Standard 
 
-The IC protocol is a standardized way to share thots. It's meant to be incredibly simple so anyone can contribute and benefit.
+IC is a standardized way to share thots. It's meant to be incredibly simple so anyone can contribute and benefit.
 
 The following is a valid `.ic`
 ```
@@ -11,6 +11,7 @@ IC
 # Structure 
 * newlines separate everything
 * lines with no leading special character define the [thot](/docs/ic.md#Thots) we'll be describing 
+* we'll strip leading and ending whitespace 
 
 #### Special Characters
 

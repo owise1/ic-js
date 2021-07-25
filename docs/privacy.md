@@ -12,4 +12,4 @@ A couple useful conventions would be:
 
 ## Can I be tracked?
 
-IC is built on top of IPFS and is not encrypted. This makes it so we can share and benefit from each other's ideas easily. Your IC groups live in your browser or on your server so it is possible that your IP could be tracked if someone was so inclined.  A VPN could help with that.
+ic-js is built on top of IPFS and is not encrypted. This makes it so we can share and benefit from each other's ideas easily. Your IC groups live in your browser or on your server so it is possible that your IP could be tracked if someone was so inclined.  A VPN could help with that.

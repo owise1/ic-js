@@ -5,7 +5,8 @@
 connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. databases of the subjective. a *web* of meaning. decrentralized text graph. OED for thoughts. a new medium. an alternative demographics. pools not streams.
 
 * [Intro](/docs/ic.md)
-* [IC Protocol](/docs/ic-export.md)
+* [The IC Standard](/docs/ic-export.md)
+* [Conventions](/docs/conventions.md)
 * [Privacy](/docs/privacy.md)
 
 This is a javascript implementation of IC built on [IPFS](https://ipfs.io/) and [OrbitDB](https://github.com/orbitdb/orbit-db). That means we can do lots of cool things like collaborate and control our ICs. There's no central database. The only people who have it are the ones who use it. It's also effortless to export, share and remix them.

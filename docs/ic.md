@@ -33,7 +33,7 @@ Because `thots` are just text *and* so much other stuff online is also just text
 * `https://web.archive.org/web/20070625161555im_/http://www.pantspantspants.biz/top-original.jpg` can be assumed to be an image of some kind (but lets be a little careful with location based urls because the thing that's there could change)
 * `twitter.com` can be assumed to mean whatever's at that link (aim for canonical urls)
 
-Thots are by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
+Thots are by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust".
 
 ## Why would anyone use this?
 
@@ -41,11 +41,28 @@ IC is used to create meaning.  `.ic` is a way to store and share our thoughts on
 
 These are not tools for influence. There is no reason to spam an IC because there is no central authority.  We can easily decide what to include or remove depending on what we're after.
 
-There are only like a bazillion reasons, but for now you'll have think of them yourself 🙃
+There are only like a bazillion things you could do with IC. Here are a few ideas...
 
+### All The Types
 
-## Seeding (?)
+What if you had a motivated group of Star Wars superfans describe all the characters in the franchise....
 
-Eventually we'll amass enormous collections of thots managed and curated by different groups for different reasons.  "Seeding" is an approach to interacting with these unweildy data sets.  When we seed we use a small collection of our own and pull in only the thots from the larger set that are explicitly mentioned in ours and their direct ancestors.
+```
+Darth Vader
++slightly torn, but mostly evil
++prone to overreactions
+-cuddly
+```
+
+Then we created an online personality test where we presented the descrptions and had participants describe themselves.  Now we can show them the Star Wars character they're most like!  We can also easily combine their responses with Harry Potter fan lists or traditional psychological categories too.  It's all open and easy. All we need to know if the location of the sanctioned lists. We can also use ML clustering techniques to find connections between characters across literature.
+
+### Shadow reviews
+
+A browser extension that creates a shadow review system on top of every e-commerce site.  It'd use the canonical url as the parent from which all associations/descriptions stemmed.  Individual `.ic` files would be published in public on ipfs and aggregated by the extension.  This system would have a number of benefits over the current review systems
+
+* decentralized so they can't be controlled by the site owners
+* reviews would be more in depth than the current "narrative" style 
+* individual reviewers (perspectives) / review keywords (thots and the perspectives that used them) could be purged from your view to create a more personalized view
+* easily surface reviews from your social networks
 
 

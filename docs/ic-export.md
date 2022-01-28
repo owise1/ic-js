@@ -11,7 +11,7 @@ IC
 # Structure 
 * newlines separate everything
 * lines with no leading special character define the [thot](/docs/ic.md#Thots) we'll be describing 
-* we'll strip leading and ending whitespace 
+* leading and ending whitespace is stripped
 
 #### Special Characters
 
@@ -32,7 +32,7 @@ End of line (optional)
 // what we're tagging leads with no special character
 things to know about .ic format
 +leading plus means "yes"
-+tags can be timestamped by appending comma then js time,1620150217594
++tags can be timestamped by appending comma the js time,1620150217594
 +leading minus means "no"
 -harms hippos
 // when you want to switch to a new tag

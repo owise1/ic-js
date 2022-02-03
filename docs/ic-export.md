@@ -2,6 +2,22 @@
 
 IC is a standardized way to share thots. It's meant to be incredibly simple so anyone can contribute and benefit.
 
+Here's an example:
+
+```
+IC is
++ plain text
++ with a couple simple rules
+- complicated
+```
+That's it. The preceding example demonstrates the fundamental concepts of  IC:
+
+* When we encounter a file on the internet or a text string formatted like so that's an `IC`.  By default we assume it represents a single perspective. 
+* the first line- `IC is` - declares that this is the [thot](#Thots) we're about to describe. 
+* lines that start with a `+` are like "yes".  In this case, this person thinks `IC is` *is* `plain text`, and from a certain perspective they're right. `+plain text` strengthens the connection between `IC is` and `plain text`. The connection is directional: `plain text` describes `IC is` or you could say that `plain text` is a child of `IC is`.
+* a `-` at the beginning of the line is like a "no". `IC is` is "repelling" `complicated`
+* notice that the initial thot is `IC is` not `IC`. It could have been with `IC` too, nbd. However, at that moment I chose to keep it more "natural". That's how I ended up writing it and then I hit <enter>. It really depends on what you intend to use the `IC` for.  Writing more colloquially or more "off the cuff" will end up connecting you to perspectives closer to your own.  Writing more formally will make your contributions broader.
+
 The following is a valid `.ic`
 ```
 IC

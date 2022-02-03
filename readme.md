@@ -4,7 +4,7 @@
 
 connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. databases of the subjective. a *web* of meaning. decrentralized text graph. OED for thoughts. a new medium. an alternative demographics. pools not streams.
 
-* [Intro](/docs/ic.md)
+* [What is IC?](/docs/ic.md)
 * [The IC Standard](/docs/ic-export.md)
 * [Conventions](/docs/conventions.md)
 * [Privacy](/docs/privacy.md)

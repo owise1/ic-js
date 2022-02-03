@@ -1,26 +1,14 @@
 # Intelligence Collective
 
-IC is an extremely simple text format designed for creating meaning.  It's a simple way to share, collect and connect our associations, perceptions, ([thots](#Thots)) with others.
-
-Here's an example:
-
-```
-IC is
-+ plain text
-+ with a couple simple rules
-- complicated
-```
-That's it. The preceding example demonstrates the fundamental concepts of  IC:
-
-* When we encounter a file on the internet or a text string formatted like so that's an `IC`.  By default we assume it represents a single perspective. 
-* the first line- `IC is` - declares that this is the [thot](#Thots) we're about to describe. 
-* lines that start with a `+` are like "yes".  In this case, this person thinks `IC is` *is* `plain text`, and from a certain perspective they're right. `+plain text` strengthens the connection between `IC is` and `plain text`. The connection is directional: `plain text` describes `IC is` or you could say that `plain text` is a child of `IC is`.
-* a `-` at the beginning of the line is like a "no". `IC is` is "repelling" `complicated`
-* notice that the initial thot is `IC is` not `IC`. It could have been with `IC` too, nbd. However, at that moment I chose to keep it more "natural". That's how I ended up writing it and then I hit <enter>. It really depends on what you intend to use the `IC` for.  Writing more colloquially or more "off the cuff" will end up connecting you to perspectives closer to your own.  Writing more formally will make your contributions broader.
-
-### tldr
+IC is an extremely simple text format designed for creating meaning.  It's a simple way to share, collect and connect our associations, perceptions, and thoughts with others.
 
 The easiest way to think about `IC` is like tagging. Only you're tagging everything, even the tags themselves. And the tags don't have to be short, they can be any length. And the tags aren't siloed inside whatever platform you happen to be using. They're just "on the internet", so when you tag "tree", or "embarassing moments" it can be combined with everyone else's everywhere.
+
+IC is also like an umbel (like Queen Anne's Lace)
+
+![umbels](https://upload.wikimedia.org/wikipedia/commons/b/ba/DaucusCarota.jpg)
+
+Clusters of meaning scattered through a meadow and we're the little kids collecting them for potions.
 
 ## Thots
 
@@ -36,13 +24,15 @@ Because `thots` are just text *and* so much other stuff online is also just text
 * `twitter.com` can be assumed to mean whatever's at that link (aim for canonical urls)
 * `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` a wallet address?
 
-Thots are by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust".
+Thots are by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
+
+You can just call them "tags" if you want.
 
 ## Why would anyone use this?
 
-IC is used to create meaning.  `.ic` is a way to store and share our thoughts on the web.  It's simpler and more straightforward than HTML because it serves a different purpose. We can use it build a universal database of human thought normalized on the way we speak. And we can use it to create dense meaning webs with closeknit groups.
+We can use ICs to create and discover meaning.  `.ic` is a way to store and share our thoughts on the web.  It's simpler and more straightforward than HTML because it serves a different purpose. We can use it to build a universal database of human thought normalized on the way we speak. And we can use it to create dense meaning webs with closeknit groups.
 
-These are not tools for influence. There is no reason to spam an IC because there is no central authority.  We can easily decide what to include or remove depending on what we're after.
+These are tools for connection not influence. There is no reason to spam an IC because there is no central authority.  We can easily decide what to include or remove depending on what we're after.
 
 There are only like a bazillion things you could do with IC. Here are a few ideas...
 
@@ -73,4 +63,5 @@ A browser extension that creates a shadow review system on top of every e-commer
 
 To get a taste of what the web has become, what we've all become accustomed to, search for a recipe on google.  Wade past Google's promoted links and the prepackaged results from services with the resources/[$$] motivations to build to google's idosyncratic recipe ingestion API, then click one of the results.  Now scroll past popups, video ads, commentary on how much the author's family loves this generations old secret recipe and you may find the recipe you started out wanting in the first place.
 
-With IC I could easily start collecting links under "recipes" then combine mine with all my friends, or other trusted ICs. Add to that that we can tag each recipe with the ingedients, or thoughts about it, tips...and we'd have a simple searchable recipe box.
+With IC I could easily start collecting links under "recipes" then combine mine with all my friends, or other trusted ICs. Add to that that we can tag each recipe with the ingredients, or thoughts about it, tips...and we'd have a simple, personalized, searchable recipe box.
+

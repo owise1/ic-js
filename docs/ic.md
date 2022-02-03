@@ -8,7 +8,7 @@ IC is also like an umbel (like Queen Anne's Lace)
 
 ![umbels](https://upload.wikimedia.org/wikipedia/commons/b/ba/DaucusCarota.jpg)
 
-Clusters of meaning scattered through a meadow and we're the little kids collecting them for potions.
+Clusters of meaning scattered through a meadow and we're the kids collecting them for potions.
 
 ## Thots
 
@@ -30,11 +30,13 @@ You can just call them "tags" if you want.
 
 ## Why would anyone use this?
 
-We can use ICs to create and discover meaning.  `.ic` is a way to store and share our thoughts on the web.  It's simpler and more straightforward than HTML because it serves a different purpose. We can use it to build a universal database of human thought normalized on the way we speak. And we can use it to create dense meaning webs with closeknit groups.
+We can use ICs to create and discover meaning. I put down what I think. You put down what you think. Then we combine them.  
 
-These are tools for connection not influence. There is no reason to spam an IC because there is no central authority.  We can easily decide what to include or remove depending on what we're after.
+`.ic` is a way to store and share our thoughts on the web.  It's simpler and more straightforward than HTML because it serves a different purpose. We can use it to build a universal database of human thought normalized on the way we speak. And we can use it to create dense meaning webs with closeknit groups.
 
-There are only like a bazillion things you could do with IC. Here are a few ideas...
+These are tools for connection not influence. There is no reason to spam an IC because there is no central authority.  We can easily decide what to include or remove depending on what we're after. Our trusted collections are treasures. We protect them.
+
+Also, there are only like a bazillion other things you could do with an IC. Here are a few ideas...
 
 ### All The Types
 
@@ -47,7 +49,7 @@ Darth Vader
 -cuddly
 ```
 
-Then we created an online personality test where we presented the descrptions and had participants describe themselves.  Now we can show them the Star Wars character they're most like!  We can also easily combine their responses with Harry Potter fan lists or traditional psychological categories too.  It's all open and easy. All we need to know is the location of the sanctioned lists. We can also use ML clustering techniques to find connections between characters across literature. fun.
+Then we created an online personality test where we presented the descriptions and had participants describe themselves.  Now we can show them the Star Wars character they're most like!  We can also easily combine their responses with Harry Potter fan lists or traditional psychological categories too.  It's all open and easy. All we need to know is the location of the sanctioned lists. We can also use ML clustering techniques to find connections between characters across literature. fun.
 
 ### Shadow reviews
 
@@ -64,4 +66,10 @@ A browser extension that creates a shadow review system on top of every e-commer
 To get a taste of what the web has become, what we've all become accustomed to, search for a recipe on google.  Wade past Google's promoted links and the prepackaged results from services with the resources/[$$] motivations to build to google's idosyncratic recipe ingestion API, then click one of the results.  Now scroll past popups, video ads, commentary on how much the author's family loves this generations old secret recipe and you may find the recipe you started out wanting in the first place.
 
 With IC I could easily start collecting links under "recipes" then combine mine with all my friends, or other trusted ICs. Add to that that we can tag each recipe with the ingredients, or thoughts about it, tips...and we'd have a simple, personalized, searchable recipe box.
+ 
+ Or you do it with links and you've got a distributed del.icio.us with almost no effort.
+
+ ### Conjuring The Big Brain That Ends Humanity
+
+ Let's address the elephant in the room.  Are we about to unwittingly unleash the sentient machine that ultimately ends all human suffering by simply removing the source of said suffering? Tough one. I honestly don't know, but I kinda doubt it.
 

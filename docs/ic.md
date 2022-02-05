@@ -9,9 +9,6 @@ Or it's like an umbel. Clusters of meaning scattered through a meadow, and we're
 ![umbels](https://upload.wikimedia.org/wikipedia/commons/b/ba/DaucusCarota.jpg)
 
 
-## What do you mean by creating meaning?
-
-Rorscach, Tree..
 
 ## Thots
 

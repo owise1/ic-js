@@ -1,14 +1,17 @@
 # Intelligence Collective
 
-IC is an extremely simple text format designed for creating meaning.  It's a simple way to share, collect and connect our associations, perceptions, and thoughts with others.
+IC is an extremely simple text format designed for creating meaning.  It's a simple way to collect, share, and connect our associations, perceptions, and thoughts with others.
 
 The easiest way to think about `IC` is like tagging. Only you're tagging everything, even the tags themselves. And the tags don't have to be short, they can be any length. And the tags aren't siloed inside whatever platform you happen to be using. They're just "on the internet", so when you tag "tree", or "embarassing moments" it can be combined with everyone else's everywhere.
 
-IC is also like an umbel (like Queen Anne's Lace)
+Or it's like an umbel. Clusters of meaning scattered through a meadow, and we're the kids collecting them for potions.
 
 ![umbels](https://upload.wikimedia.org/wikipedia/commons/b/ba/DaucusCarota.jpg)
 
-Clusters of meaning scattered through a meadow and we're the kids collecting them for potions.
+
+## What do you mean by creating meaning?
+
+Rorscach, Tree..
 
 ## Thots
 
@@ -26,17 +29,17 @@ Because `thots` are just text *and* so much other stuff online is also just text
 
 Thots are by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
 
-You can just call them "tags" if you want.
+Also, if it makes you more comfortable, you can just call them "tags". We're old.
 
 ## Why would anyone use this?
 
-We can use ICs to create and discover meaning. I put down what I think. You put down what you think. Then we combine them.  
+We can use ICs to create and discover meaning. I put down what I think. You put down what you think. Then we combine them in all the different ways.
 
 `.ic` is a way to store and share our thoughts on the web.  It's simpler and more straightforward than HTML because it serves a different purpose. We can use it to build a universal database of human thought normalized on the way we speak. And we can use it to create dense meaning webs with closeknit groups.
 
 These are tools for connection not influence. There is no reason to spam an IC because there is no central authority.  We can easily decide what to include or remove depending on what we're after. Our trusted collections are treasures. We protect them.
 
-Also, there are only like a bazillion other things you could do with an IC. Here are a few ideas...
+Plus, there are only like a bazillion other things you could do with an IC. Here are a few ideas...
 
 ### All The Types
 
@@ -71,5 +74,5 @@ With IC I could easily start collecting links under "recipes" then combine mine 
 
  ### Conjuring The Big Brain That Ends Humanity
 
- Let's address the elephant in the room.  Are we about to unwittingly unleash the sentient machine that ultimately ends all human suffering by simply removing the source of said suffering? Tough one. I honestly don't know, but I kinda doubt it.
+ Let's address the elephant in the room.  Are we about to unwittingly unleash the sentient machine that ends all human suffering by removing the source? I *kinda* doubt it, but it's probably worth considering.
 

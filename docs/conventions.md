@@ -19,12 +19,12 @@ When you publish an `.ic` you can decide whether to clean these up
 
 ## Settings
 
-`.ic`s need interfaces and sometimes we want the settings for those interfaces contained in the IC itself.  We can tag the name of the IC itself with tag preceded by `:`. So for example if our interface is at `intelligencecollective.wtf` we could do somethin like:
+`.ic`s need interfaces and sometimes we want the settings for those interfaces contained in the IC itself.  We can tag the name of the IC itself with tag preceded by `|`. So for example if our interface is at `intelligencecollective.wtf` we could do somethin like:
 
 ```
 intelligencecollective.wtf
-+:lowercase:1
-+:depth:1
++|lowercase|1
++|depth|1
 ```
 
 ## Stray Thots...

@@ -28,6 +28,18 @@ Thots are by humans for humans. They are not facts. In fact, they're not even tr
 
 Also, if it makes you more comfortable, you can just call them "tags". We're old.
 
+## Perspectives
+
+Perspectives are what tie thots together. A perspective says "this thing is like that thing", "that thot is not like this thot", "these thos seem related", or "that is definitely not that". A perspective strengthens a connection between two thots or it weakens the connection.
+
+Let's try an example: "tree". When a lumberjack looks at a tree they may see it's genus, it's age, diameter, straightness, hardness, it's proximity to other trees, accessibility. When a gardener looks at a tree they may also think of it's genus, but also when it blooms, how big it gets, its habit, whether it's native to the area, whether it produces fruit. In some moments their thoughts overlap, in others they diverge.  As their experience grows their thoughts about trees grow more nuanced and idiosyncratic. Were the gardener and the lumberjack to meet we'd likely see some "cross-pollination" of their perspectives.
+
+ I dont have a single perspective. If I am anything it is a collection of ever-shifting perspectives.  As I encounter new perspectives I can try them on and then take the parts that resonate.  This is how we treat perspectives in IC. They're "cheap": easy to create, incorporate, or discard. They are ubiquitous. Some perspectives are collections of other perspectives. We hold onto and build on the ones that have meaning for us or that are useful for certain purposes.
+
+ ## IC Specification
+
+ That's really all there is to it. We've got thots and we've got perspectives that connect them together.  That's really all we need to start building an entirely new way of using the internet.  If you are the techie sort you can [go here](/docs/ic-export.md) to read about the IC spec. Otherwise, continue onward...
+
 ## Why would anyone use this?
 
 We can use ICs to create and discover meaning. I put down what I think. You put down what you think. Then we combine them in all the different ways.

@@ -2,7 +2,9 @@ const { v4: uuidv4 } = require('uuid')
 const EventEmitter = require('./eventemitter')
 const OrbitDB = require('orbit-db')
 const isIPFS = require('is-ipfs')
-const { reverse, uniqBy, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map } = require('ramda')
+const { identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy } = require('ramda')
+
+const DELIM = "\n"
 
 class IC extends EventEmitter {
   constructor (dId, db) {
@@ -16,6 +18,7 @@ class IC extends EventEmitter {
     this._db.events.on('ready', emitData)
     // this._db.events.on('write', console.log)
   }
+
   db () {
     return this._db
   }
@@ -53,33 +56,41 @@ class IC extends EventEmitter {
       uniqBy(prop('from')),
       reverse,
       map(tag => `${tag.yesNo}${tag.from},${tag.time}`),
-      join("\n")
+      join(DELIM)
     )
     const formatPerspective = tags => {
       const tagsByTos = groupBy(prop('to'), tags)
       return pipe(
         toPairs,
-        map(arr => `${arr[0]}${"\n"}${cleanTags(arr[1])}`),
-        join("\n")
+        map(arr => `${arr[0]}${DELIM}${cleanTags(arr[1])}`),
+        join(DELIM)
       )(tagsByTos)
     } 
     return pipe(
       toPairs,
-      map(arr => `_${"\n"}${formatPerspective(arr[1])}`),
-      join("\n")
+      map(arr => `_${DELIM}${formatPerspective(arr[1])}`),
+      join(DELIM)
     )(byDIds)
   }
 
-  async exportToIpfs (fn) {
+  async exportToIpfs (fn, opts = {}) {
+    if (typeof fn === 'object') {
+      opts = Object.assign({}, fn)
+      fn = identity
+    }
+    const content = this.export(fn)
+    if (opts.add) {
+      opts.add(content)
+    }
     return this.ipfs.add({
-      content: this.export(fn)
+      content
     })
   }
 
   async import (str) {
-    const lines = str.split("\n").filter(line => !/^\/\//.test(line) && line)
+    const lines = str.split(DELIM).filter(line => !/^\/\//.test(line) && line)
     // import from ipfs
-    if (lines.length === 1 && isIPFS.cid(str)) {
+    if (lines.length === 1 && (isIPFS.cid(str) || isIPFS.path(str))) {
       for await (const file of this.ipfs.get(str)) {
         if (!file.content) continue
         const content = []
@@ -140,10 +151,9 @@ class IC extends EventEmitter {
       }
     })
     const instance = new IC(orbitdb.id, db)
-    instance.orbitdb = orbitdb
     instance.ipfs = options.ipfs
+    instance.orbitdb = orbitdb // used for testing
     return instance
   }
 }
-
 module.exports = IC

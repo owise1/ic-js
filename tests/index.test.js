@@ -8,7 +8,7 @@ describe('Two IC instances', function () {
   const to = 'things that make me feel better'
   const from1 = 'sleep'
   before(async function () {
-    this.timeout(5000)
+    this.timeout(15000)
     // Create the first peer
     const ipfs1_config = { repo: './ipfs1' }
     ipfs1 = await IPFS.create(ipfs1_config)
@@ -81,10 +81,6 @@ describe('Two IC instances', function () {
     describe('export', function () {
       it('is string', function () {
         assert.ok(typeof ice === 'string')
-      })
-      it('first line is dId', function () {
-        const regex = new RegExp(`^_${ic1.id}`)
-        assert.ok(regex.test(ice))
       })
       it('next line is first "to"', function () {
         assert.equal(iceLines[1], to)

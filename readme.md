@@ -57,4 +57,3 @@ note flattens tags to most recent
 ## Roadmap
 
 * use in browser and nodejs
-* private/encrypted groups

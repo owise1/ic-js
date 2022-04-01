@@ -21,8 +21,9 @@ Because `thots` are just text *and* so much other stuff online is also just text
 * `@owise1` can be assumed to be a social media handle of some kind. at least these days.
 * `/ipfs/QmckHbjMQTww8UaruK8HMxGv9aMGyx2ynFggqg6wQqs19i` can be assumed to be a file of some kind
 * `https://web.archive.org/web/20070625161555im_/http://www.pantspantspants.biz/top-original.jpg` can be assumed to be an image of some kind (but lets be a little careful with location based urls because the thing that's there could change)
-* `twitter.com` can be assumed to mean whatever's at that link (aim for canonical urls)
 * `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` a wallet address?
+* `http://owise1.guru/a-walk-in-the-park.ic` now here's where things start to get interesting. we can link to (and describe) another whole collection of thots.
+*  `/ipfs/QmZYk6ArdhH6AqE3hk1nfDnZf92DZaLHFiZWK8k9opPoSB/orbitdb-zdpuAm8F2GT1fhBto9NYT2AXP8fEfqdoC3K59qwukEZJ4zCmv-Feedback.ic` and here's a collection that will never change. so we can keep using it to connect larger and larger collections
 
 Thots are by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
 
@@ -32,7 +33,7 @@ Also, if it makes you more comfortable, you can just call them "tags". We're old
 
 Perspectives are what tie thots together. A perspective says "this thing is like that thing", "that thot is not like this thot", "these thots seem related", or "that is definitely not that". A perspective strengthens a connection between two thots or it weakens the connection.
 
-Let's try an example: "tree". When a lumberjack looks at a tree they may see it's genus, it's age, diameter, straightness, hardness, it's proximity to other trees, accessibility. When a gardener looks at a tree they too may think of it's genus, but also when it blooms, how big it gets, its habit, whether it's native to the area, whether it produces fruit. In some moments their thoughts overlap, in others they diverge.  As their experience grows their thoughts about trees grow more nuanced and idiosyncratic. Were the gardener and the lumberjack to meet we'd likely see some "cross-pollination" of their perspectives.
+Let's try an example: "tree". When a lumberjack looks at a tree they may see it's genus, it's age, diameter, straightness, hardness, it's proximity to other trees, accessibility. When a gardener looks at a tree they too may think of it's genus, but also when it blooms, how big it gets, its habit, whether it's native to the area, whether it produces fruit. In some moments their thoughts overlap, in others they diverge.  As their experience grows their thoughts about trees grow more nuanced and idiosyncratic. Were the gardener and the lumberjack to meet we'd likely see some "cross-pollination" of their perspectives. Wouldn't it be cool (useful, so dang psychedelic...) for the lumberjack to see what the gardener sees when they look at a black locust tree? And vice versa?
 
  I dont have a single perspective. If I am anything it is a collection of ever-shifting perspectives.  As I encounter new perspectives I can try them on and then take the parts that resonate.  This is how we treat perspectives in IC. They're "cheap": easy to create, incorporate, or discard. They are ubiquitous. Some perspectives are collections of other perspectives. We hold onto and build on the ones that have meaning for us or that are useful for certain purposes.
 
@@ -61,7 +62,7 @@ Darth Vader
 -cuddly
 ```
 
-Then we created an online personality test where we presented the descriptions and had participants describe themselves.  Now we can show them the Star Wars character they're most like!  We can also easily combine their responses with Harry Potter fan lists or traditional psychological categories too.  It's all open and easy. All we need to know is the location of the sanctioned lists. We can also use ML clustering techniques to find connections between characters across literature. fun.
+Then we created an online personality test where we only presented the descriptions to participants who used them to describe themselves.  Now we can show them the Star Wars character they're most like!  We can also easily combine their responses with Harry Potter fan lists or traditional psychological categories too.  It's all open and easy. All we need to know is the location of the sanctioned lists. We can also use ML clustering techniques to find connections between characters across literature. fun.
 
 ### Shadow reviews
 

@@ -11,9 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.4",
-    "mocha": "^8.3.2",
     "ipfs": "^0.54.4",
-    "ipfs-http-client": "^49.0.4"
+    "ipfs-http-client": "^49.0.4",
+    "mocha": "^8.3.2"
   },
   "standard": {
     "globals": [
@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "cross-fetch": "^3.1.5",
     "is-ipfs": "^5.0.0",
     "orbit-db": "^0.26.1",
     "ramda": "^0.27.1",

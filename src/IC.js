@@ -2,6 +2,7 @@ const { v4: uuidv4 } = require('uuid')
 const EventEmitter = require('./eventemitter')
 const isIPFS = require('is-ipfs')
 const { identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy } = require('ramda')
+const fetch = require('cross-fetch')
 
 const DELIM = "\n"
 
@@ -19,6 +20,7 @@ class IC extends EventEmitter {
     if (this.opts.ipfs) {
       this.ipfs = this.opts.ipfs
     }
+    this._importedUrls = []
   }
 
   async tag (to, from, yesNo = '+', opts = {}) {
@@ -38,7 +40,7 @@ class IC extends EventEmitter {
   }
 
   all () {
-    return this.tags.split(0)
+    return this.tags.slice(0)
   }
 
   export (fn) {
@@ -85,22 +87,37 @@ class IC extends EventEmitter {
 
   async import (str) {
     const lines = str.split(DELIM).filter(line => !/^\/\//.test(line) && line)
-    // import from ipfs
-    if (this.ipfs && lines.length === 1 && (isIPFS.cid(str) || isIPFS.path(str))) {
-      for await (const file of this.ipfs.get(str)) {
-        if (!file.content) continue
-        const content = []
-        for await (const chunk of file.content) {
-          content.push(chunk)
+
+    // perhaps we're importing from somehwere else
+    if (lines.length === 1) {
+      // import from ipfs
+      if (this.ipfs && (isIPFS.cid(str) || isIPFS.path(str))) {
+        for await (const file of this.ipfs.get(str)) {
+          if (!file.content) continue
+          const content = []
+          for await (const chunk of file.content) {
+            content.push(chunk)
+          }
+          const importStr = pipe(
+            map(s => s.toString()),
+            join('')
+          )(content)
+          // should only be on file so return
+          return this.import(importStr)
         }
-        const importStr = pipe(
-          map(s => s.toString()),
-          join('')
-        )(content)
-        // should only be on file so return
-        return this.import(importStr)
+      }
+      // import from url
+      if(/^https?:\/\//.test(str) && /\.ic$/.test(str)) {
+        if (this._importedUrls.includes(str)) {
+          return false
+        } else {
+          this._importedUrls.push(str)
+          const importStr = await fetch(str).then(res => res.text())
+          return this.import(importStr)
+        }
       }
     }
+
     // import from string
     let dId = uuidv4()
     let to = null

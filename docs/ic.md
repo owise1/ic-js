@@ -23,9 +23,9 @@ Because `thots` are just text *and* so much other stuff online is also just text
 * `https://web.archive.org/web/20070625161555im_/http://www.pantspantspants.biz/top-original.jpg` can be assumed to be an image of some kind (but lets be a little careful with location based urls because the thing that's there could change)
 * `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` a wallet address?
 * `http://owise1.guru/a-walk-in-the-park.ic` now here's where things start to get interesting. we can link to (and describe) another whole collection of thots.
-*  `/ipfs/QmZYk6ArdhH6AqE3hk1nfDnZf92DZaLHFiZWK8k9opPoSB/orbitdb-zdpuAm8F2GT1fhBto9NYT2AXP8fEfqdoC3K59qwukEZJ4zCmv-Feedback.ic` and here's a collection that will never change. so we can keep using it to connect larger and larger collections
+*  `/ipfs/QmZYk6ArdhH6AqE3hk1nfDnZf92DZaLHFiZWK8k9opPoSB/orbitdb-zdpuAm8F2GT1fhBto9NYT2AXP8fEfqdoC3K59qwukEZJ4zCmv-Feedback.ic` and here's a collection that will never change. so we can keep using it to connect larger and larger collections like building up DNA. ipfs really lend itself to this because, in theory, the more a file is used, the more nodes have it, the more likely it is to be saved
 
-Thots are by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
+thots are first and foremost by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
 
 Also, if it makes you more comfortable, you can just call them "tags". We're old.
 
@@ -45,7 +45,7 @@ Let's try an example: "tree". When a lumberjack looks at a tree they may see it'
 
 We can use ICs to create and discover meaning. I put down what I think. You put down what you think. Then we combine them in all the different ways.
 
-`.ic` is a way to store and share our thoughts on the web.  It's simpler and more straightforward than HTML because it serves a different purpose. We can use it to build a universal database of human thought normalized on the way we speak. And we can use it to create dense meaning webs with closeknit groups.
+`.ic` is a way to store and share our thoughts on the web.  It's simpler and more straightforward than HTML (or even RDF) because it serves a different purpose. We can use it to build a universal database of human thought normalized on the way we speak. And we can use it to create dense meaning webs with closeknit groups.
 
 These are tools for connection not influence. There is no reason to spam an IC because there is no central authority.  We can easily decide what to include or remove depending on what we're after. Our trusted collections are treasures. We protect them.
 
@@ -79,8 +79,12 @@ A browser extension that creates a shadow review system on top of every e-commer
 To get a taste of what the web has become, what we've all become accustomed to, search for a recipe on google.  Wade past Google's promoted links and the prepackaged results from services with the resources/[$$] motivations to build to google's idosyncratic recipe ingestion API, then click one of the results.  Now scroll past popups, video ads, commentary on how much the author's family loves this generations old secret recipe and you may find the recipe you started out wanting in the first place.
 
 With IC I could easily start collecting links under "recipes" then combine mine with all my friends, or other trusted ICs. Add to that that we can tag each recipe with the ingredients, or thoughts about it, tips...and we'd have a simple, personalized, searchable recipe box.
+
+You could even go one step further and put the entire recipe into the .ic format. The you could do truly insane things like find all the recipe with 1 cup of sugar and lemons.
  
  Or you do it with links and you've got a distributed del.icio.us with almost no effort.
+
+ When you use Google you basically type in keywords. "Gifts" for "moms" who like "baking shows". But as you add keywords the results get slimer and slimer until there's nothing there.  Now lets say you actually had something to put there. Like for instance what if I had a product for (or just something to say about) "gifts for moms who like baking, rodeos and christina applegate movies"? (cuz hoo boy do i). With the current web I'd post it on social media where it'd flit by glazed stares or post it on my lonely blog and hope the google gods shine their countenance on me.  Another alternative is to jot down a quick `ic`, upload it anywhere public (even in a tweet if it fits) and add it to some of your collections.  You may have an ic with your old high school friends, or maybe you contribute to some larger collections that you know aggregators actively monitor. Now at least it's out there, and anyone within your extended networks looking for that combination of tags can find it.
 
  ### Conjuring The Big Brain That Ends Humanity
 

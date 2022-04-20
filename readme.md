@@ -2,7 +2,7 @@
 
 > you know sometimes you're like "this is like that" and "that is like this"? well, this is like that
 
-connection collections. thought maps. distributed brainstorms. structured spaces built to aid introspection and imagination. databases of the subjective. a *web* of meaning. decentralized text graph. OED for thoughts. a new medium. an alternative demographics. pools not streams.
+connection collections. thought maps. distributed brainstorms. databases of the subjective. a *web* of meaning. decentralized text graph. OED for thoughts. a new medium / demographics / internet primitive. pools not streams. structured spaces built to aid introspection and imagination.
 
 * [What is IC?](/docs/ic.md)
 * [The IC Standard](/docs/ic-export.md)

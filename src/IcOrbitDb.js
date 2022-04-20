@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require('uuid')
 const OrbitDB = require('orbit-db')
 const { identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy } = require('ramda')
-const IC = require('./ic')
+const IC = require('./IC')
 
 const DELIM = "\n"
 

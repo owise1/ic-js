@@ -80,7 +80,7 @@ To get a taste of what the web has become, what we've all become accustomed to, 
 
 With IC I could easily start collecting links under "recipes" then combine mine with all my friends, or other trusted ICs. Add to that that we can tag each recipe with the ingredients, or thoughts about it, tips...and we'd have a simple, personalized, searchable recipe box. You could add a "favorite" tag to recipes you like, then filter everything on perspectives that had similar favorites. It wouldn't be "AI" or particularly algorithmic in any real sense, just finding what you wanted.
 
-You could even go one step further and put the entire recipe into the .ic format. Then you could do truly insane things like find all the recipe with 1 cup of sugar and spicebush sugar.
+You could even go one step further and put the entire recipe into the .ic format. Then you could do truly insane things like find all the recipe with 1 cup of milk and spicebush sugar.
 
  Or you could do this whole thing with links instead of recipes and you've got yourself a distributed del.icio.us with almost no effort.
 

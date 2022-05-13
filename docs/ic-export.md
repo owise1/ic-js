@@ -39,7 +39,7 @@ First position in line
 
 End of line (optional)
 
-* `,` time. It's here if you need it, but I'm starting to question this.
+* `,` a single number. It could be js time, or a count if you're consolidating, or...
 
 #### Extended Example
 
@@ -66,7 +66,7 @@ things i love
 // append _ to begin perspective id
 _0491622800
 things i love
-+oatmeal raisin cookies
++oatmeal raisin cookies,1000 // or we can use a number to indicate a count.
 +bats wings
 -puppy dogs
 

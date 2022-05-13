@@ -76,17 +76,17 @@ A browser extension that creates a shadow review system on top of every e-commer
 
 ### Search
 
-To get a taste of what the web has become, what we've all become accustomed to, search for a recipe on google.  Wade past Google's promoted links and the prepackaged results from services with the resources/[$$] motivations to build to google's idosyncratic recipe ingestion API, then click one of the results.  Now scroll past popups, video ads, commentary on how much the author's family loves this generations old secret recipe and you may find the recipe you started out wanting in the first place.
+To get a taste of what the web has become, what we've all become accustomed to, search for a recipe on google.  Wade past Google's promoted links and the prepackaged results from services with the resources/[$$] motivations to build to google's idosyncratic recipe ingestion API, then click one of the results.  Now scroll past popups, video ads, commentary on how much the author's family loves this generations old secret recipe and you may find the recipe you started out wanting in the first place. It sucks, yes, but HTML enables all of this. That doesnt mean HTML sucks (far from it). 
 
 With IC I could easily start collecting links under "recipes" then combine mine with all my friends, or other trusted ICs. Add to that that we can tag each recipe with the ingredients, or thoughts about it, tips...and we'd have a simple, personalized, searchable recipe box. You could add a "favorite" tag to recipes you like, then filter everything on perspectives that had similar favorites. It wouldn't be "AI" or particularly algorithmic in any real sense, just finding what you wanted.
 
- Or you do it with links and you've got a distributed del.icio.us with almost no effort.
+You could even go one step further and put the entire recipe into the .ic format. Then you could do truly insane things like find all the recipe with 1 cup of sugar and spicebush sugar.
 
-You could even go one step further and put the entire recipe into the .ic format. Then you could do truly insane things like find all the recipe with 1 cup of sugar and spice bush essence
+ Or you could do this whole thing with links instead of recipes and you've got yourself a distributed del.icio.us with almost no effort.
 
  When you use Google you basically type in keywords. "Gifts" for "moms" who like "baking shows". But as you add keywords the results get slimmer and slimmer until there's nothing there.  Now lets say you actually had something to put there. Like for instance what if I had a product for (or just something to say about) "gifts for moms who like The Great British Baking Show, rodeos and Christina Applegate movies"? (cuz hoo boy do i). With the current web I'd post it on social media where it'd flit by glazed stares or post it on my lonely blog and hope the google gods shine their countenance on me.  Another alternative is to jot down a quick `ic`, upload it anywhere public (even in a tweet if it fits) and add it to some of your collections.  You may have an ic with your old high school friends, or maybe you contribute to some larger collections that you know aggregators actively monitor. Now at least it's out there, and anyone within your *extended* networks looking for that combination of tags can find it.
 
- Still too many results? Try using a dialect that makes sense for whatever you're after.  If your local rodeo is "The Pit" use that instead, change "The Great British Baking Show" to "bake off" and now you're getting results closer to "you". You dont need fancy black boxes full of mystery to get results "for you" 
+ Still getting too many results? Try using a dialect that makes sense for whatever you're after.  If your local rodeo is "The Pit" use that instead, change "The Great British Baking Show" to "bake off" and now you're getting results closer to "you". You dont need fancy black boxes full of mystery to produce results "for you" 
 
  ### Conjuring The Big Brain That Ends Humanity
 

@@ -9,7 +9,9 @@ connection collections. thought maps. distributed brainstorms. databases of the 
 * [Conventions](/docs/conventions.md)
 * [Privacy](/docs/privacy.md)
 
-This is a javascript implementation of IC built on [IPFS](https://ipfs.io/) and [OrbitDB](https://github.com/orbitdb/orbit-db). That means we can do lots of cool things like collaborate and control our ICs. There's no central database. The only people who have it are the ones who use it. It's also effortless to export, share and remix them.
+This is a javascript implementation of IC built to be stored in memory, external files on the internet.
+
+There is also an experimental implementation built on [IPFS](https://ipfs.io/) and [OrbitDB](https://github.com/orbitdb/orbit-db). That means we can do lots of cool things like collaborate and control our ICs. There's no central database. The only people who have it are the ones who use it. It's also effortless to export, share and remix them.
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

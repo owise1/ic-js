@@ -29,7 +29,7 @@ IC
 * lines with no leading special character define the [thot](/docs/ic.md#Thots) we'll be describing 
 * leading and ending whitespace is stripped
 
-#### Special Characters
+## Special Characters
 
 First position in line
 * `+` - "yes" / connect
@@ -40,6 +40,10 @@ First position in line
 End of line (optional)
 
 * `,` a single number. It could be js time, or a count if you're consolidating, or...
+
+## External ICs
+
+An IC URL always ends in `.ic` and begins `http....`. If an IC URL is encountered either at the top level or as a tag it'll be imported.
 
 #### Extended Example
 

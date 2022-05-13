@@ -107,13 +107,15 @@ class IC extends EventEmitter {
         }
       }
       // import from url
-      if(/^https?:\/\//.test(str) && /\.ic$/.test(str)) {
+      if (IC.isIcUrl(str)) {
         if (this._importedUrls.includes(str)) {
           return false
         } else {
           this._importedUrls.push(str)
-          const importStr = await fetch(str).then(res => res.text())
-          return this.import(importStr)
+          const importStr = await fetch(str)
+            .then(res => res.text())
+            .catch(err => console.log(err))
+          return importStr && this.import(importStr)
         }
       }
     }
@@ -127,12 +129,20 @@ class IC extends EventEmitter {
       } else if (/^[+-]/.test(line)) {
         if (to) {
           const pieces = line.replace(/^[+-]/, '').split(',')
+          if (IC.isIcUrl(pieces[0])) {
+            await this.import(pieces[0])
+          }
           await this.tag(to, pieces[0], !/^-/.test(line), {
             dId,
             time: pieces[1] ? parseInt(pieces[1], 10) : null
           })
         }
+      // top level
       } else {
+        // fetch those
+        if (IC.isIcUrl(line)) {
+          await this.import(line)
+        }
         to = line
       }
     }))
@@ -140,6 +150,10 @@ class IC extends EventEmitter {
 
   static clean (str) {
     return str.replace(/^[_+-\s]/, '').replace(/^\/\//, '')
+  }
+
+  static isIcUrl (str) {
+    return /^https?:\/\//.test(str) && /\.ic$/.test(str)
   }
 }
 module.exports = IC

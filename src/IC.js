@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require('uuid')
 const EventEmitter = require('./eventemitter')
 const isIPFS = require('is-ipfs')
-const { identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy } = require('ramda')
+const { sort, identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy } = require('ramda')
 const fetch = require('cross-fetch')
 
 const DELIM = "\n"
@@ -47,11 +47,13 @@ class IC extends EventEmitter {
   export (fn) {
     const all = fn ? fn(this.all()) : this.all()
     const byDIds = groupBy(prop('dId'), all)
+    const _sort = what => this.opts.pure ? IC.sort(what) : what 
     const cleanTags = pipe(
       reverse,
       uniqBy(prop('from')),
       reverse,
       map(tag => `${tag.yesNo}${tag.from}${this.opts.pure ? '' : ',' + tag.time}`),
+      _sort,
       join(DELIM)
     )
     const formatPerspective = tags => {
@@ -59,12 +61,14 @@ class IC extends EventEmitter {
       return pipe(
         toPairs,
         map(arr => `${arr[0]}${DELIM}${cleanTags(arr[1])}`),
+        _sort,
         join(DELIM)
       )(tagsByTos)
-    } 
+    }
     return pipe(
       toPairs,
       map(arr => `_${DELIM}${formatPerspective(arr[1])}`),
+      _sort,
       join(DELIM)
     )(byDIds)
   }
@@ -174,4 +178,7 @@ class IC extends EventEmitter {
     return /^https?:\/\//.test(str) && /\.ic$/.test(str)
   }
 }
+IC.sort = sort((a = '', b = '') => {
+  return a.localeCompare(b)
+})
 module.exports = IC

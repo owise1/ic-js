@@ -27,13 +27,16 @@ There is also an experimental implementation built on [IPFS](https://ipfs.io/) a
 ### ic.import(str)
 > parses IC export format into db
 
-`str` can be `.ic` [formatted string](/docs/ic-export.md) *or* ipfs CID containing `.ic` formatted string
+`str` can be `.ic` [formatted string](/docs/ic-export.md) *or* url to `.ic` *or* ipfs CID containing `.ic` formatted string
 
 ### ic.export(fn)
 > returns [IC export](/docs/ic-export.md) of entire db in `.ic` formatted string
 
 `fn` can transform/filter tags before they're output
 note flattens tags to most recent
+
+### ic.refresh()
+> re-fetches external ICs
 
 ### ic.exportToIpfs()
 > returns CID of `.ic` formatted string
@@ -50,6 +53,9 @@ note flattens tags to most recent
 
 ### IC.create(opts)
 > factory function 
+
+### IC.isIcUrl(str)
+> basic regex check for `http` and `.ic`
 
 ## Events
 

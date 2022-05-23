@@ -45,5 +45,12 @@ describe('Basic IC instances', function () {
       await internalIc.import(file)
       assert.equal(ic.all().length - 1, internalIc.all().length)
     })
+    it('refreshing wont double the tags', async function () {
+      const ic = new IC
+      await ic.import(TEST_URL)
+      const initialCount = ic.all().length
+      await ic.refresh()
+      assert.ok(ic.all().length === initialCount)
+    })
   })
 })

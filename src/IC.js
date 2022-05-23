@@ -9,7 +9,8 @@ const DELIM = "\n"
 class IC extends EventEmitter {
   constructor (opts = {
     id: uuidv4(),
-    inMemory: true
+    inMemory: true,
+    pure: true
   }) {
     super()
     this.opts = opts
@@ -20,7 +21,7 @@ class IC extends EventEmitter {
     if (this.opts.ipfs) {
       this.ipfs = this.opts.ipfs
     }
-    this._importedUrls = []
+    this._importedIcs = []
   }
 
   async tag (to, from, yesNo = '+', opts = {}) {
@@ -50,7 +51,7 @@ class IC extends EventEmitter {
       reverse,
       uniqBy(prop('from')),
       reverse,
-      map(tag => `${tag.yesNo}${tag.from},${tag.time}`),
+      map(tag => `${tag.yesNo}${tag.from}${this.opts.pure ? '' : ',' + tag.time}`),
       join(DELIM)
     )
     const formatPerspective = tags => {
@@ -85,37 +86,53 @@ class IC extends EventEmitter {
     })
   }
 
-  async import (str) {
+  // refetch external ICs
+  async refresh () {
+    const importedIcs = this._importedIcs.slice(0)
+    this._importedIcs = []
+    this.tags = this.tags.filter(tag => !importedIcs.includes(tag.source))
+    await this.import(importedIcs.join(DELIM))
+  }
+
+  async import (str, source) {
     const lines = str.split(DELIM).filter(line => !/^\/\//.test(line) && line)
+    if (!source) {
+      source = this.id
+    }
 
     // perhaps we're importing from somehwere else
     if (lines.length === 1) {
       // import from ipfs
       if (this.ipfs && (isIPFS.cid(str) || isIPFS.path(str))) {
-        for await (const file of this.ipfs.get(str)) {
-          if (!file.content) continue
-          const content = []
-          for await (const chunk of file.content) {
-            content.push(chunk)
+        if (this._importedIcs.includes(str)) {
+          return false
+        } else {
+          this._importedIcs.push(str)
+          for await (const file of this.ipfs.get(str)) {
+            if (!file.content) continue
+            const content = []
+            for await (const chunk of file.content) {
+              content.push(chunk)
+            }
+            const importStr = pipe(
+              map(s => s.toString()),
+              join('')
+            )(content)
+            // should only be one file so return
+            return this.import(importStr, str)
           }
-          const importStr = pipe(
-            map(s => s.toString()),
-            join('')
-          )(content)
-          // should only be on file so return
-          return this.import(importStr)
         }
       }
       // import from url
       if (IC.isIcUrl(str)) {
-        if (this._importedUrls.includes(str)) {
+        if (this._importedIcs.includes(str)) {
           return false
         } else {
-          this._importedUrls.push(str)
+          this._importedIcs.push(str)
           const importStr = await fetch(str)
             .then(res => res.text())
             .catch(err => console.log(err))
-          return importStr && this.import(importStr)
+          return importStr && this.import(importStr, str)
         }
       }
     }
@@ -130,10 +147,11 @@ class IC extends EventEmitter {
         if (to) {
           const pieces = line.replace(/^[+-]/, '').split(',')
           if (IC.isIcUrl(pieces[0])) {
-            await this.import(pieces[0])
+            await this.import(pieces[0], pieces[0])
           }
           await this.tag(to, pieces[0], !/^-/.test(line), {
             dId,
+            source,
             time: pieces[1] ? parseInt(pieces[1], 10) : null
           })
         }
@@ -141,7 +159,7 @@ class IC extends EventEmitter {
       } else {
         // fetch those
         if (IC.isIcUrl(line)) {
-          await this.import(line)
+          await this.import(line, line)
         }
         to = line
       }

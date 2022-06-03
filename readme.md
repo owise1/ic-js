@@ -1,4 +1,4 @@
-# Intelligence Collective
+# Intelligence Collective (text/ic)
 
 > you know sometimes you're like "this is like that" and "that is like this"? well, this is like that
 
@@ -9,7 +9,7 @@ connection collections. thought maps. distributed brainstorms. databases of the 
 * [Conventions](/docs/conventions.md)
 * [Privacy](/docs/privacy.md)
 
-This is a javascript implementation of IC built to be stored in memory, external files on the internet.
+This is a javascript implementation of IC built to be stored in memory and external files on the internet.
 
 There is also an experimental implementation built on [IPFS](https://ipfs.io/) and [OrbitDB](https://github.com/orbitdb/orbit-db). That means we can do lots of cool things like collaborate and control our ICs. There's no central database. The only people who have it are the ones who use it. It's also effortless to export, share and remix them.
 
@@ -20,7 +20,7 @@ There is also an experimental implementation built on [IPFS](https://ipfs.io/) a
 ### ic.tag(to, from, yesNo = '+')
 > creates a tag for the perspective
 
-### all()
+### ic.all()
 > returns all tags
 
 

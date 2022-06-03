@@ -1,6 +1,6 @@
 # Intelligence Collective
 
-IC is an extremely simple text format designed for creating meaning.  It's a simple way to collect, share, and connect our associations, perceptions, and thoughts with others.
+IC is an extremely simple text format designed for creating meaning.  It's an easy way to collect, share, and connect our associations, perceptions, and thoughts with others.
 
 The easiest way to think about `IC` is like tagging. Only you're tagging everything, even the tags themselves. And the tags don't have to be short, they can be any length. And the tags aren't siloed inside whatever platform you happen to be using. They're just "on the internet", so when you tag "tree", or "embarassing moments" it can be combined with everyone else's everywhere.
 
@@ -14,16 +14,16 @@ Or it's like an umbel. Clusters of meaning scattered through a meadow, and we're
 
 Every new splooge of tech needs a dumb word and this is ours.  But don't worry, this one is actually good cuz it sounds the same but it's spelled different.
 
-`Thots` are just text, but you can think of them like a digital version of thoughts. They are our thoughts when we put them into a computer. Clearly something is lost, but it's so much more *efficient*.  Shorter `thots` like "cool" and "brilliant" can be used to tie huge numbers of things together.  As `thots` get longer and/or more idiosyncratic, *and* as the collections of `thots` grow, they can be used to connect like minds, or maybe create new ones.
+`Thots` are just text, but you can think of them like a digital version of thoughts. They are our thoughts when we put them into a computer. Clearly something is lost, but it's so much more *efficient*.  Shorter `thots` like "cool" and "brilliant" can be used to tie huge numbers of things together.  As `thots` get longer ("it's quite possible this is not what they intended") and/or more idiosyncratic ("i guess you're right that I didn't techincally eat a shoehorn"), *and* as the collections of `thots` grow and grow, they can be used to connect like minds, or explore new ones.
 
 Because `thots` are just text *and* so much other stuff online is also just text, `thots` can also represent those online things. For example:
 
 * `@owise1` can be assumed to be a social media handle of some kind. at least these days.
 * `/ipfs/QmckHbjMQTww8UaruK8HMxGv9aMGyx2ynFggqg6wQqs19i` can be assumed to be a file of some kind
 * `https://web.archive.org/web/20070625161555im_/http://www.pantspantspants.biz/top-original.jpg` can be assumed to be an image of some kind (but lets be a little careful with location based urls because the thing that's there could change)
-* `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` a wallet address?
-* `http://owise1.guru/a-walk-in-the-park.ic` now here's where things start to get interesting. we can link to (and describe) another whole collection of thots.
-*  `/ipfs/QmZYk6ArdhH6AqE3hk1nfDnZf92DZaLHFiZWK8k9opPoSB/orbitdb-zdpuAm8F2GT1fhBto9NYT2AXP8fEfqdoC3K59qwukEZJ4zCmv-Feedback.ic` and here's a collection that will never change. so we can keep using it to connect larger and larger collections like building up DNA. ipfs really lend itself to this because, in theory, the more a file is used, the more nodes have it, the more likely it is to be saved
+* `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` an address?
+* `http://owise1.guru/a-walk-in-the-park.ic` now here's where things start to get interesting. we can link to, build on, and describe another whole collection of thots.
+*  `/ipfs/QmZYk6ArdhH6AqE3hk1nfDnZf92DZaLHFiZWK8k9opPoSB/orbitdb-zdpuAm8F2GT1fhBto9NYT2AXP8fEfqdoC3K59qwukEZJ4zCmv-Feedback.ic` and here's a collection that will never change. so we can keep using it to connect larger and larger collections like building up DNA. ipfs really lends itself to this because, in theory, the more a file is used, the more nodes have it, the more likely it is to be saved
 
 thots are first and foremost by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
 
@@ -35,7 +35,7 @@ Perspectives are what tie thots together. A perspective says "this thing is like
 
 Let's try an example: "tree". When a lumberjack looks at a tree they may see it's genus, it's age, diameter, straightness, hardness, it's proximity to other trees, accessibility. When a gardener looks at a tree they too may think of it's genus, but also when it blooms, how big it gets, its habit, whether it's native to the area, whether it produces fruit. In some moments their thoughts overlap, in others they diverge.  As their experience grows their thoughts about trees grow more nuanced and idiosyncratic. Were the gardener and the lumberjack to meet we'd likely see some "cross-pollination" of their perspectives. Wouldn't it be cool (useful, so dang psychedelic...) for the lumberjack to see what the gardener sees when they look at a black locust tree? And vice versa?
 
- I dont have a single perspective. If I am anything it is a collection of ever-shifting perspectives.  As I encounter new perspectives I can try them on and then take the parts that resonate.  This is how we treat perspectives in IC. They're "cheap": easy to create, incorporate, or discard. They are ubiquitous. Some perspectives are collections of other perspectives. We hold onto and build on the ones that have meaning for us or that are useful for certain purposes.
+ I dont have a single perspective. If I am anything it is a collection of ever-shifting perspectives.  As I encounter new perspectives I can try them on and retain the parts that stick.  This is how we treat perspectives in IC. They're "cheap": easy to create, incorporate, or discard. They are ubiquitous. Some perspectives are collections of other perspectives. We hold onto and build on the ones that have meaning for us or that are useful for certain purposes.
 
  ## IC Specification
 
@@ -51,6 +51,20 @@ These are tools for connection not influence. There is no reason to spam an IC b
 
 Plus, there are only like a bazillion other things you could do with an IC. Here are a few ideas...
 
+### Search
+
+To get a taste of what the web has become, what we've all become accustomed to, search for a recipe on google.  Wade past Google's promoted links and the prepackaged results from services with the resources/[$$] motivations to build to google's idosyncratic recipe ingestion API, then click one of the results.  Now scroll past popups, video ads, commentary on how much the author's family loves this generations old secret recipe and you may find the recipe you started out wanting in the first place. It sucks, yes, but HTML enables all of this. That doesnt mean HTML sucks (far from it). But it really was designed to do all these things. 
+
+With IC I could easily start collecting links under "recipes" then combine mine with all my friends, or other trusted ICs. Add to that that we can tag each recipe with the ingredients, or thoughts about it, tips...and we'd have a simple, personalized, searchable recipe box. You could add a "favorite" tag to recipes you like, then filter everything on perspectives that had similar favorites. It wouldn't be "AI" or particularly algorithmic in any real sense, just finding what you wanted.
+
+You could even go one step further and put the entire recipe into the .ic format. Then you could do truly insane things like find all the recipes with 1 cup of milk and spicebush sugar.
+
+ Or you could do this whole thing with links instead of recipes and you've got yourself a distributed del.icio.us with almost no effort.
+
+ When you use Google you basically type in keywords. "Gifts" for "moms" who like "baking shows". But as you add keywords the results get slimmer and slimmer until there's nothing there.  Now lets say you actually had something to put there. Like for instance what if I had a product for (or just something to say about) "gifts for moms who like The Great British Baking Show, rodeos and Christina Applegate movies"? (cuz hoo boy do i). With the current web I'd post it on social media where it'd flit by glazed stares or post it on my lonely blog and hope the google gods shine their countenance on me.  Another alternative is to jot down a quick `ic`, upload it anywhere public (even in a tweet if it fits) and add it to some of your collections.  You may have an ic with your old high school friends, or maybe you contribute to some larger collections that you know aggregators actively monitor. Now at least it's out there, and anyone within your *extended* networks looking for that combination of tags can find it.
+
+ Still getting too many results? Try using a dialect that makes sense for whatever you're after.  If your local rodeo is "The Pit" use that instead, change "The Great British Baking Show" to "bake off" and now you're getting results closer to "you". We dont need fancy black boxes full of mystery to produce results "for you" 
+
 ### All The Types
 
 What if you had a motivated group of Star Wars superfans describe all the characters in the franchise....
@@ -62,9 +76,9 @@ Darth Vader
 -cuddly
 ```
 
-Then we created an online personality test where we only presented the descriptions to participants who used them to describe themselves.  Now we can show them the Star Wars character they're most like!  We can also easily combine their responses with Harry Potter fan lists or traditional psychological categories too.  It's all open and easy. All we need to know is the location of the sanctioned lists. We can also use ML clustering techniques to find connections between characters across literature. fun.
+Then we created an online personality test where participants described themselves using only those descriptions (sans characters).  Now we can show them the Star Wars character they're most like!  We can also easily combine their responses with Harry Potter fan lists or traditional psychological categories too.  It's all open and easy. All we need to know is the location of the sanctioned lists. We could also use ML clustering techniques to find connections between characters across literature. fun.
 
-### Shadow reviews
+### Shadow reviews (Steve's idea)
 
 A browser extension that creates a shadow review system on top of every e-commerce site.  It'd use the canonical url as the parent from which all associations/descriptions stemmed.  Individual `.ic` files would be published in public on ipfs and aggregated by the extension.  This system would have a number of benefits over the current review systems
 
@@ -73,20 +87,10 @@ A browser extension that creates a shadow review system on top of every e-commer
 * individual reviewers (perspectives) / review keywords (thots and the perspectives that used them) could be purged from your view to create a more personalized view
 * easily surface reviews from your social networks
 
+### An internet combination lock
 
-### Search
+We can combine any number of disperate thoughts together and then place something there for someone to find. What lies at the intersection of "I must admit I've lost faith in the entire enterprise", "Dwayne "The Rock" Johnson", "Surely you take weather cirriusly?" and "Bojangles"?  Gifts, buried treasure, hidden gems in all the unexplored corners.
 
-To get a taste of what the web has become, what we've all become accustomed to, search for a recipe on google.  Wade past Google's promoted links and the prepackaged results from services with the resources/[$$] motivations to build to google's idosyncratic recipe ingestion API, then click one of the results.  Now scroll past popups, video ads, commentary on how much the author's family loves this generations old secret recipe and you may find the recipe you started out wanting in the first place. It sucks, yes, but HTML enables all of this. That doesnt mean HTML sucks (far from it). 
-
-With IC I could easily start collecting links under "recipes" then combine mine with all my friends, or other trusted ICs. Add to that that we can tag each recipe with the ingredients, or thoughts about it, tips...and we'd have a simple, personalized, searchable recipe box. You could add a "favorite" tag to recipes you like, then filter everything on perspectives that had similar favorites. It wouldn't be "AI" or particularly algorithmic in any real sense, just finding what you wanted.
-
-You could even go one step further and put the entire recipe into the .ic format. Then you could do truly insane things like find all the recipe with 1 cup of milk and spicebush sugar.
-
- Or you could do this whole thing with links instead of recipes and you've got yourself a distributed del.icio.us with almost no effort.
-
- When you use Google you basically type in keywords. "Gifts" for "moms" who like "baking shows". But as you add keywords the results get slimmer and slimmer until there's nothing there.  Now lets say you actually had something to put there. Like for instance what if I had a product for (or just something to say about) "gifts for moms who like The Great British Baking Show, rodeos and Christina Applegate movies"? (cuz hoo boy do i). With the current web I'd post it on social media where it'd flit by glazed stares or post it on my lonely blog and hope the google gods shine their countenance on me.  Another alternative is to jot down a quick `ic`, upload it anywhere public (even in a tweet if it fits) and add it to some of your collections.  You may have an ic with your old high school friends, or maybe you contribute to some larger collections that you know aggregators actively monitor. Now at least it's out there, and anyone within your *extended* networks looking for that combination of tags can find it.
-
- Still getting too many results? Try using a dialect that makes sense for whatever you're after.  If your local rodeo is "The Pit" use that instead, change "The Great British Baking Show" to "bake off" and now you're getting results closer to "you". You dont need fancy black boxes full of mystery to produce results "for you" 
 
  ### Conjuring The Big Brain That Ends Humanity
 

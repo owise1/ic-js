@@ -47,7 +47,7 @@ class IC extends EventEmitter {
   export (fn) {
     const all = fn ? fn(this.all()) : this.all()
     const byDIds = groupBy(prop('dId'), all)
-    const _sort = what => this.opts.pure ? IC.sort(what) : what 
+    const _sort = what => this.opts.pure ? IC.sort(what) : what
     const cleanTags = pipe(
       reverse,
       uniqBy(prop('from')),
@@ -90,12 +90,16 @@ class IC extends EventEmitter {
     })
   }
 
+  externalIcs () {
+    return this._importedIcs.slice(0)
+  }
+
   // refetch external ICs
   async refresh () {
     const importedIcs = this._importedIcs.slice(0)
     this._importedIcs = []
     this.tags = this.tags.filter(tag => !importedIcs.includes(tag.source))
-    await this.import(importedIcs.join(DELIM))
+    return await this.import(importedIcs.join(DELIM))
   }
 
   async import (str, source) {

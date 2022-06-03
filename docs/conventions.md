@@ -1,6 +1,8 @@
 # IC Conventions
 
-IC is so flexible it'd be a good idea to have some conventions. Here are a few ideas.
+The ic format is simple to use and extremely flexible so it's a good idea to have some conventions. Conventions will be global to the extent that we can agree on things. But more than likely they will be regional, local and communal, "dialectical" and goal dependent. You dont need an international body when you already have the mind. 
+
+Here are a few ideas.
 
 ## Lowercase
 
@@ -8,11 +10,13 @@ Unless it's necessary use all lowercase.
 
 ## Misspellings / Deduping
 
-Tag `is spelled ___`. Ex:
+a few options...
 
 ```
 cherios
 +is spelled cherrios
++is really cherrios
++cherrios
 ```
 
 When you publish an `.ic` you can decide whether to clean these up
@@ -46,3 +50,4 @@ ICs created by `ic-js` are pure by default.
 ### Seeding (?)
 
 Eventually we'll amass enormous collections of thots managed and curated by different groups for different reasons.  "Seeding" is an approach to interacting with these unweildy data sets.  When we seed we use a small collection of our own and pull in only the thots from the larger set that are explicitly mentioned in ours and their direct ancestors. Like seeding a cloud.
+

@@ -1,6 +1,6 @@
 # Intelligence Collective (text/ic)
 
-> you know sometimes you're like "this is like that" and "that is like this"? well, this is like that
+> you know how sometimes you're like "this is like that" and "that is like this"? well, this is like that
 
 IC is an extremely simple text format designed for creating meaning. It's an easy way to collect, share, and connect our associations, perceptions, and thoughts. Here I'll teach you:
 

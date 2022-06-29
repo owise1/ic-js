@@ -2,7 +2,27 @@
 
 > you know sometimes you're like "this is like that" and "that is like this"? well, this is like that
 
-connection collections. thought maps. distributed brainstorms. databases of the subjective. a *web* of meaning. decentralized text graph. OED for thoughts. a new medium / demographics / internet primitive. pools not streams. structured spaces built to aid introspection and imagination.
+IC is an extremely simple text format designed for creating meaning. It's an easy way to collect, share, and connect our associations, perceptions, and thoughts. Here I'll teach you:
+
+```
+Intelligence Collective
++ connection collections
++ thought maps
++ distributed brainstorms
++ a database of the subjective
++ a *web* of meaning
++ decentralized text graph
++ OED for thoughts
++ a new medium 
++ a new demographics 
++ a new internet primitive
++ pools not streams
++ structured spaces built to aid introspection and imagination
+- hard to learn 
++ thoughts
+- facts
+- html
+```
 
 * [What is IC?](/docs/ic.md)
 * [The IC Standard](/docs/ic-export.md)

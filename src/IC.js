@@ -7,13 +7,14 @@ const fetch = require('cross-fetch')
 const DELIM = "\n"
 
 class IC extends EventEmitter {
-  constructor (opts = {
-    id: uuidv4(),
-    inMemory: true,
-    pure: true
-  }) {
+  constructor (opts = {}) {
     super()
-    this.opts = opts
+    this.opts = Object.assign({
+      id: uuidv4(),
+      inMemory: true,
+      pure: true,
+      importDepth: -1
+    }, opts)
     this.id = opts.id
     if (this.opts.inMemory) {
       this.tags = []
@@ -102,6 +103,11 @@ class IC extends EventEmitter {
     return await this.import(importedIcs.join(DELIM))
   }
 
+  // TODO: honor depth value
+  _shouldImport (str) {
+    return IC.isIcUrl(str) && (this.opts.importDepth === -1 || this.opts.importDepth > 0)
+  }
+
   async import (str, source) {
     const lines = str.split(DELIM).filter(line => !/^\/\//.test(line) && line)
     if (!source) {
@@ -154,19 +160,19 @@ class IC extends EventEmitter {
       } else if (/^[+-]/.test(line)) {
         if (to) {
           const pieces = line.replace(/^[+-]/, '').split(',')
-          if (IC.isIcUrl(pieces[0])) {
-            await this.import(pieces[0], pieces[0])
-          }
           await this.tag(to, pieces[0], !/^-/.test(line), {
             dId,
             source,
             time: pieces[1] ? parseInt(pieces[1], 10) : null
           })
+          if (this._shouldImport(pieces[0])) {
+            await this.import(pieces[0], pieces[0])
+          }
         }
       // top level
       } else {
         // fetch those
-        if (IC.isIcUrl(line)) {
+        if (this._shouldImport(line)) {
           await this.import(line, line)
         }
         to = line

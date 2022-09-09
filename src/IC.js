@@ -159,11 +159,17 @@ class IC extends EventEmitter {
         dId = line.replace(/^_/, '') || uuidv4()
       } else if (/^[+-]/.test(line)) {
         if (to) {
-          const pieces = line.replace(/^[+-]/, '').split(',')
-          await this.tag(to, pieces[0], !/^-/.test(line), {
+          const timePieceRegEx = /,\d+$/
+          let time
+          if (timePieceRegEx.test(line)) {
+            const pieces = line.split(',')
+            time = parseInt(pieces[pieces.length -1], 10)
+          }
+          const from = line.replace(/^[+-]/, '').replace(timePieceRegEx, '')
+          await this.tag(to, from, !/^-/.test(line), {
             dId,
             source,
-            time: pieces[1] ? parseInt(pieces[1], 10) : null
+            time
           })
           if (this._shouldImport(pieces[0])) {
             await this.import(pieces[0], pieces[0])

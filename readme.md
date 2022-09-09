@@ -15,12 +15,12 @@ Intelligence Collective
 + OED for thoughts
 + a new medium 
 + a new demographics 
-+ a new internet primitive
++ internet primitive
++ auteur protocol
 + pools not streams
 + structured spaces built to aid introspection and imagination
 - hard to learn 
 + thoughts
-- facts
 - html
 ```
 

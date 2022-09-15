@@ -171,8 +171,8 @@ class IC extends EventEmitter {
             source,
             time
           })
-          if (this._shouldImport(pieces[0])) {
-            await this.import(pieces[0], pieces[0])
+          if (this._shouldImport(from)) {
+            await this.import(from, from)
           }
         }
       // top level
@@ -191,7 +191,8 @@ class IC extends EventEmitter {
   }
 
   static isIcUrl (str) {
-    return /^https?:\/\//.test(str) && /\.ic$/.test(str)
+    const domain = str.replace(/^https?:\/\//g, '')
+    return (/^.+\.[^.]{2,3}\//.test(domain) || /^localhost/.test(domain)) && /\.ic$/.test(str)
   }
 }
 IC.sort = sort((a = '', b = '') => {

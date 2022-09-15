@@ -177,11 +177,11 @@ class IC extends EventEmitter {
         }
       // top level
       } else {
+        to = line
         // fetch those
         if (this._shouldImport(line)) {
           await this.import(line, line)
         }
-        to = line
       }
     }))
   }

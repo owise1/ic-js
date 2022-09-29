@@ -44,7 +44,7 @@ There is also an experimental implementation built on [IPFS](https://ipfs.io/) a
 > returns all tags
 
 
-### ic.import(str)
+### async ic.import(str)
 > parses IC export format into db
 
 `str` can be `.ic` [formatted string](/docs/ic-export.md) *or* url to `.ic` *or* ipfs CID containing `.ic` formatted string
@@ -55,8 +55,11 @@ There is also an experimental implementation built on [IPFS](https://ipfs.io/) a
 `fn` can transform/filter tags before they're output
 note flattens tags to most recent
 
-### ic.refresh()
+### async ic.refresh()
 > re-fetches external ICs
+
+### ic.seed(['seed tags'])
+> returns a new IC containing only tags connected to your seed tags
 
 ### ic.exportToIpfs()
 > returns CID of `.ic` formatted string

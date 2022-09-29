@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require('uuid')
 const EventEmitter = require('./eventemitter')
 const isIPFS = require('is-ipfs')
-const { sort, identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy } = require('ramda')
+const { concat, filter, sort, identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy, uniqWith } = require('ramda')
 const fetch = require('cross-fetch')
 
 const DELIM = "\n"
@@ -184,6 +184,30 @@ class IC extends EventEmitter {
         }
       }
     }))
+  }
+
+  seed (tags = []) {
+    const ic = new IC
+    ic.id = this.id
+    const tagsForSeeds = seeds => this.tags.filter(t => seeds.includes(t.to) || seeds.includes(t.from))
+    let usedSeeds = []
+    let seeds = []
+    let newSeeds = []
+    do {
+      usedSeeds = usedSeeds.concat(tags)
+      seeds = pipe(
+        concat(tagsForSeeds(tags)),
+        uniqWith((a, b) => a.to === b.to && a.from === b.from && a.dId === b.dId && a.yesNo === b.yesNo),
+      )(seeds)
+      newSeeds = pipe(
+        map(t => [t.to, t.from]),
+        flatten,
+        filter(t => !usedSeeds.includes(t))
+      ) (seeds)
+      tags = newSeeds
+    } while (newSeeds.length > 0)
+    ic.tags = seeds
+    return ic
   }
 
   static clean (str) {

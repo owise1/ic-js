@@ -15,7 +15,7 @@ class IC extends EventEmitter {
       pure: true,
       importDepth: -1
     }, opts)
-    this.id = opts.id
+    this.id = this.opts.id
     if (this.opts.inMemory) {
       this.tags = []
     }
@@ -105,7 +105,7 @@ class IC extends EventEmitter {
 
   // TODO: honor depth value
   _shouldImport (str) {
-    return IC.isIcUrl(str) && (this.opts.importDepth === -1 || this.opts.importDepth > 0)
+    return IC.isIcUrl(str) && (this.opts.importDepth === -1 || this.opts.importDepth > 1)
   }
 
   async import (str, source) {

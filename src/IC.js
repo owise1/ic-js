@@ -41,8 +41,16 @@ class IC extends EventEmitter {
     return tag
   }
 
-  all () {
-    return this.tags.slice(0)
+  all (opts = {}) {
+    const ret = this.tags.slice(0)
+    if (opts.flatten) {
+      return pipe(
+        reverse, // reverse so uniq will take the latest
+        uniqWith((a, b) => a.dId === b.dId && a.from === b.from && a.to === b.to),
+        reverse // put it back so newest are at the end
+      )(ret)
+    }
+    return ret
   }
 
   export (fn) {

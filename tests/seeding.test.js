@@ -19,7 +19,6 @@ describe('Seeding', function () {
     })
     it('returns only tags connected to seeds', function () {
       const newIc = ic.seed(['icfs'])
-      console.log(newIc.all())
       assert(newIc.all().length === 3)
     })
   })

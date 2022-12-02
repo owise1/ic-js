@@ -43,7 +43,6 @@ There is also an experimental implementation built on [IPFS](https://ipfs.io/) a
 ### ic.all()
 > returns all tags
 
-
 ### async ic.import(str)
 > parses IC export format into db
 
@@ -60,6 +59,9 @@ note flattens tags to most recent
 
 ### ic.seed(['seed tags'])
 > returns a new IC containing only tags connected to your seed tags
+
+### ic.findTagged(['parent tags'])
+> returns an array of all children with all given parents
 
 ### ic.exportToIpfs()
 > returns CID of `.ic` formatted string

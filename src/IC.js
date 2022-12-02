@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require('uuid')
 const EventEmitter = require('./eventemitter')
 const isIPFS = require('is-ipfs')
-const { concat, filter, sort, identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy, uniqWith } = require('ramda')
+const { intersection, concat, filter, sort, identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy, uniqWith } = require('ramda')
 const fetch = require('cross-fetch')
 
 const DELIM = "\n"
@@ -218,8 +218,27 @@ class IC extends EventEmitter {
     return ic
   }
 
+  findTagged (parents = [], opts = {}) {
+    const all = this.all({ flatten: true })
+    let ret 
+    while (parents.length > 0) {
+      const parent = parents.shift()
+      const children = all.filter(t => t.to === parent && t.yesNo !== '-')
+      const tags = children.map(t => t.from)
+      if (!ret) {
+        ret = tags
+      } else {
+        ret = intersection(ret, tags) 
+      }
+      if (ret.length === 0) {
+        return []
+      }
+    }
+    return ret
+  }
+
   static clean (str) {
-    return str.replace(/^[_+-\s]/, '').replace(/^\/\//, '')
+    return str.replace(/^[_+-\s]/, '').replace(/^\/\//, '').trim()
   }
 
   static isIcUrl (str) {

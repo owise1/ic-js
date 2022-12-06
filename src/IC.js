@@ -26,6 +26,8 @@ class IC extends EventEmitter {
   }
 
   async tag (to, from, yesNo = '+', opts = {}) {
+    if (to === '') return
+    if (from === '') return
     const tag = Object.assign({
       from: IC.clean(from),
       to: IC.clean(to),
@@ -117,7 +119,7 @@ class IC extends EventEmitter {
   }
 
   async import (str, source) {
-    const lines = str.split(DELIM).filter(line => !/^\/\//.test(line) && line)
+    const lines = str.split(DELIM).filter(line => !/^\/\//.test(line) && IC.clean(line))
     if (!source) {
       source = this.id
     }

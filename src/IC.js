@@ -119,6 +119,7 @@ class IC extends EventEmitter {
   }
 
   async import (str, source) {
+    if (!str) return false
     const lines = str.split(DELIM).filter(line => !/^\/\//.test(line) && IC.clean(line))
     if (!source) {
       source = this.id

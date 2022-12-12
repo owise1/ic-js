@@ -164,12 +164,19 @@ class IC extends EventEmitter {
 
     // import from string
     let dId = uuidv4()
-    let to = null
+    let tos = [] 
+    let foundTag = false
+    const resetTos = () => {
+      tos = []
+      foundTag = false
+    }
     return Promise.all(lines.map(async line => {
       if (/^_/.test(line)) {
         dId = line.replace(/^_/, '') || uuidv4()
+        resetTos()
       } else if (/^[+-]/.test(line)) {
-        if (to) {
+        foundTag = true
+        if (tos.length > 0) {
           const timePieceRegEx = /,\d+$/
           let time
           if (timePieceRegEx.test(line)) {
@@ -177,18 +184,23 @@ class IC extends EventEmitter {
             time = parseInt(pieces[pieces.length -1], 10)
           }
           const from = line.replace(/^[+-]/, '').replace(timePieceRegEx, '')
-          await this.tag(to, from, !/^-/.test(line), {
-            dId,
-            source,
-            time
-          })
+          await Promise.all(tos.map(async to => {
+            await this.tag(to, from, !/^-/.test(line), {
+              dId,
+              source,
+              time
+            })
+          }))
           if (this._shouldImport(from)) {
             await this.import(from, from)
           }
         }
       // top level
       } else {
-        to = line
+        if (foundTag) {
+          resetTos()
+        }
+        tos.push(line)
         // fetch those
         if (this._shouldImport(line)) {
           await this.import(line, line)

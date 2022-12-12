@@ -45,6 +45,7 @@ End of line (optional)
 
 An IC URL always ends in `.ic` and begins `http....`. If an IC URL is encountered either at the top level or as a tag it'll be imported.
 
+
 #### Extended Example
 
 ```
@@ -75,3 +76,31 @@ things i love
 -puppy dogs
 
 ```
+
+
+## Advanced Topics
+
+### Grouping Tags
+
+If a child tag has multiple parents you can combine the parents like:
+
+```
+apples
+pears
++ green
++ fruit
+```
+
+In the above example both `apples` and `pears` will be tagged with `green` and `fruit`
+
+### "Pure" ICs
+
+A "pure" IC is designed to make it easy to identify ICs with the exact same content.  Two pure ICs will have the same content hash if they are the same. This makes things more efficient, allow us to create composable ICs and structure all knowledge.  In order to make this happen we need to follow a few rules:
+
+* pure ICs represent a single perspective and contain no initial `_`
+* pure ICs have no comments and do not use the optional `,{number}` for any tag
+* top level parents, as well as tags within a parent are ordered by unicode char code
+* parents should be fully grouped, with groups of the most parents coming first and descending to single parent tags
+* parents in groups should also be ordered by unicode char code
+
+ICs created by `ic-js` *should be* pure by default. [todo](https://github.com/owise1/ic-js/issues/3)

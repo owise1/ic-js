@@ -30,4 +30,21 @@ describe('all() method', function () {
       assert.equal(toNos[0].yesNo, '-')
     })
   })
+  describe('grouping parents', function () {
+    before(async function () {
+      file = await fs.promises.readFile('./tests/grouping.ic', 'utf8')
+      ic = new IC
+      await ic.import(file)
+    })
+    it('import correctly tags grouped thots', function () {
+      assert.lengthOf(ic.all(), 3)
+      assert.lengthOf(ic.findTagged(['icfs', 'name']), 1)
+      assert.lengthOf(ic.findTagged(['another']), 1)
+    })
+    describe('exporting', function () {
+      it('groups on exports', function () {
+        console.log(ic.export())
+      })
+    })
+  })
 })

@@ -37,13 +37,13 @@ describe('all() method', function () {
       await ic.import(file)
     })
     it('import correctly tags grouped thots', function () {
-      assert.lengthOf(ic.all(), 3)
       assert.lengthOf(ic.findTagged(['icfs', 'name']), 1)
       assert.lengthOf(ic.findTagged(['another']), 1)
     })
     describe('exporting', function () {
       it('groups on exports', function () {
-        console.log(ic.export())
+        const e = ic.export({ pure: true })
+        assert.equal(e, file.replace(/^_/, ''))
       })
     })
   })

@@ -48,11 +48,11 @@ There is also an experimental implementation built on [IPFS](https://ipfs.io/) a
 
 `str` can be `.ic` [formatted string](/docs/ic-export.md) *or* url to `.ic` *or* ipfs CID containing `.ic` formatted string
 
-### ic.export(fn)
+### ic.export(fn, opts = { pure: false })
 > returns [IC export](/docs/ic-export.md) of entire db in `.ic` formatted string
 
 `fn` can transform/filter tags before they're output
-note flattens tags to most recent
+note flattens tags to most recent. also, see [IC purity](/docs/ic-export.md#pure-ics)
 
 ### async ic.refresh()
 > re-fetches external ICs

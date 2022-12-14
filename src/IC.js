@@ -12,7 +12,6 @@ class IC extends EventEmitter {
     this.opts = Object.assign({
       id: uuidv4(),
       inMemory: true,
-      pure: true,
       importDepth: -1
     }, opts)
     this.id = this.opts.id
@@ -55,10 +54,14 @@ class IC extends EventEmitter {
     return ret
   }
 
-  export (fn) {
+  export (fn, opts = {}) {
+    if (typeof fn === 'object') {
+      opts = fn
+      fn = null
+    }
     const all = fn ? fn(this.all()) : this.all()
     const byDIds = groupBy(prop('dId'), all)
-    const _sort = what => this.opts.pure ? IC.sort(what) : what
+    const _sort = what => opts.pure ? IC.sort(what) : what
     const cleanTags = pipe(
       reverse,
       uniqBy(prop('from')),
@@ -68,17 +71,39 @@ class IC extends EventEmitter {
       join(DELIM)
     )
     const formatPerspective = tags => {
-      const tagsByTos = groupBy(prop('to'), tags)
-      return pipe(
-        toPairs,
-        map(arr => `${arr[0]}${DELIM}${cleanTags(arr[1])}`),
-        _sort,
-        join(DELIM)
-      )(tagsByTos)
+      if (opts.pure) {
+        return pipe(
+          groupBy(t => t.yesNo + t.from),
+          toPairs,
+          map(arr => [IC.sort(arr[1].map(prop('to'))).join(DELIM), arr[0]]),
+          groupBy(prop(0)),
+          toPairs,
+          map(arr => [arr[0], arr[1].map(prop(1))]),
+          sort((a, b) => {
+            // count newlines
+            const aCount = (a[0].match(/\n/g) || []).length
+            const bCount = (b[0].match(/\n/g) || []).length
+            if (aCount > bCount) return -1
+            if (aCount < bCount) return 1
+            return IC.sort(a[0], b[0])
+          }),
+          map(arr => `${arr[0]}${DELIM}${IC.sort(arr[1]).join(DELIM)}`),
+          join(DELIM)
+        )(tags)
+
+      } else {
+        const tagsByTos = groupBy(prop('to'), tags)
+        return pipe(
+          toPairs,
+          map(arr => `${arr[0]}${DELIM}${cleanTags(arr[1])}`),
+          _sort,
+          join(DELIM)
+        )(tagsByTos)
+      }
     }
     return pipe(
       toPairs,
-      map(arr => `_${DELIM}${formatPerspective(arr[1])}`),
+      map(arr => `${opts.pure ? '' : '_'}${DELIM}${formatPerspective(arr[1])}`),
       _sort,
       join(DELIM)
     )(byDIds)

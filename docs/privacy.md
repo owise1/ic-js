@@ -9,7 +9,3 @@ Mark Zuckerberg made a deal with the devil the moment he decided to connect onli
 A couple useful conventions would be:
 * Avoid entering personal data or really any facts at all. IC is about what we think, not what is true.
 * Aim to keep perspectives small. IC makes it easy combine many small pieces
-
-## Can I be tracked?
-
-ic-js is built on top of IPFS and is not encrypted. This makes it so we can share and benefit from each other's ideas easily. Your IC groups live in your browser or on your server so it is possible that your IP could be tracked if someone was so inclined.  A VPN could help with that.

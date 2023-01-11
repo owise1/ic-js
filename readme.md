@@ -9,25 +9,25 @@ Intelligence Collective
 + connection collections
 + thought maps
 + distributed brainstorms
-+ a database of the subjective
 + a *web* of meaning
-+ decentralized text graph
-+ OED for thoughts
 + a new medium 
 + a new demographics 
 + internet primitive
-+ auteur protocol
 + pools not streams
-+ structured spaces built to aid introspection and imagination
 - hard to learn 
 + thoughts
 - html
 ```
 
+
+IC is designed for humans first and the internet second. As opposed to HTML, which combines UI, content and application logic, IC is so easy to use because it's only for one thing: recording what someone thinks. The syntax is basically just a `+`, a `-`, the `enter` key, and however you already talk. This makes it so literally anyone can conribute knowledge.  That simple syntax also makes it easy to build for and work with. 
+
+ Think of an index.ic sitting right alongside your index.html file representing what the website owner thinks and linking to other ICs on internet that they endorse, like a link list for perspectives.  IC files on internet allow us to create truly decentralized and personalized knowledge webs at any scale, without having to rely on large corporations, complex search algorithms or expensive processing power.
+
+ There is a lot to talk about. Continue here...
+
 * [What is IC?](/docs/ic.md)
 * [The IC Standard](/docs/ic-export.md)
-* [Conventions](/docs/conventions.md)
-* [Privacy](/docs/privacy.md)
 
 This is a javascript implementation of IC built to be stored in memory and external files on the internet.
 
@@ -51,8 +51,7 @@ There is also an experimental implementation built on [IPFS](https://ipfs.io/) a
 ### ic.export(fn, opts = { pure: false })
 > returns [IC export](/docs/ic-export.md) of entire db in `.ic` formatted string
 
-`fn` can transform/filter tags before they're output
-note flattens tags to most recent. also, see [IC purity](/docs/ic-export.md#pure-ics)
+`fn` can transform/filter tags before they're output. note flattens tags to most recent. also, see [IC purity](/docs/ic-export.md#pure-ics)
 
 ### async ic.refresh()
 > re-fetches external ICs

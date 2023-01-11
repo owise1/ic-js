@@ -20,7 +20,7 @@ Intelligence Collective
 ```
 
 
-IC is designed for humans first and the internet second. As opposed to HTML, which combines UI, content and application logic, IC is so easy to use because it's only for one thing: recording what someone thinks. The syntax is basically just a `+`, a `-`, the `enter` key, and however you already talk. This makes it so literally anyone can conribute knowledge.  That simple syntax also makes it easy to build for and work with. 
+IC is designed for humans first and the internet second. As opposed to HTML, which combines UI, content and application logic, IC is so easy to use because it's only for one thing: recording what someone thinks. The syntax is basically just a `+`, a `-`, the `enter` key, and however you already talk. This makes it so literally anyone can contribute knowledge.  That simple syntax also makes it easy to build for and work with. 
 
  Think of an index.ic sitting right alongside your index.html file representing what the website owner thinks and linking to other ICs on internet that they endorse, like a link list for perspectives.  IC files on internet allow us to create truly decentralized and personalized knowledge webs at any scale, without having to rely on large corporations, complex search algorithms or expensive processing power.
 

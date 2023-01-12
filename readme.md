@@ -22,7 +22,7 @@ Intelligence Collective
 
 IC is designed for humans first and the internet second. As opposed to HTML, which combines UI, content and application logic, IC is so easy to use because it's only for one thing: recording what someone thinks. The syntax is basically just a `+`, a `-`, the `enter` key, and however you already talk. This makes it so literally anyone can contribute knowledge.  That simple syntax also makes it easy to build for and work with. 
 
- Think of an index.ic sitting right alongside your index.html file representing what the website owner thinks and linking to other ICs on internet that they endorse, like a link list for perspectives.  IC files on internet allow us to create truly decentralized and personalized knowledge webs at any scale, without having to rely on large corporations, complex search algorithms or expensive processing power.
+ Think of an index.ic sitting right alongside your index.html file representing what the website owner thinks and linking to other ICs on the internet that they endorse, like a link list for perspectives.  IC files on internet allow us to create truly decentralized and personalized knowledge webs at any scale, without having to rely on large corporations, complex search algorithms or expensive processing power.
 
  There is a lot to talk about. Continue here...
 
@@ -30,8 +30,6 @@ IC is designed for humans first and the internet second. As opposed to HTML, whi
 * [The IC Standard](/docs/ic-export.md)
 
 This is a javascript implementation of IC built to be stored in memory and external files on the internet.
-
-There is also an experimental implementation built on [IPFS](https://ipfs.io/) and [OrbitDB](https://github.com/orbitdb/orbit-db). That means we can do lots of cool things like collaborate and control our ICs. There's no central database. The only people who have it are the ones who use it. It's also effortless to export, share and remix them.
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -64,12 +62,6 @@ Eventually we'll amass enormous collections of thots managed and curated by diff
 ### ic.findTagged(['parent tags'])
 > returns an array of all children with all given parents
 
-### ic.exportToIpfs()
-> returns CID of `.ic` formatted string
-
-### ic.db()
-> return underlying db (orbitDB)
-
 ## Static
 
 ### IC.clean(str)
@@ -87,7 +79,3 @@ Eventually we'll amass enormous collections of thots managed and curated by diff
 
 ### 'data'
 > when new data arrives
-
-## Roadmap
-
-* use in browser and nodejs

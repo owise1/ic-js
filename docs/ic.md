@@ -10,9 +10,12 @@ Or it's like an umbel. Clusters of meaning scattered through a meadow, and we're
 
 ## Thots
 
+
 Every new splooge of tech needs a dumb word and this is ours.  But don't worry, this one is actually good cuz it sounds the same but it's spelled different.
 
 `Thots` are just text, but you can think of them like a digital version of thoughts. They are our thoughts when we put them into a computer. Clearly something is lost, but it's so much more *efficient*.  Shorter `thots` like "cool" and "brilliant" can be used to tie huge numbers of things together.  As `thots` get longer ("it's quite possible this is not what they intended") and/or more idiosyncratic ("i guess you're right that I didn't technically eat a shoehorn"), *and* as the collections of `thots` grow and grow, they can be used to connect like minds, or explore new ones.
+
+![thots](https://bafybeicwgfnln5rakyebzhvapv2w3cwr7nlnz4jsbpcvrwmghwq2ndm2um.ipfs.nftstorage.link/)
 
 Because `thots` are just text *and* so much other stuff online is also just text, `thots` can also represent those online things. For example:
 
@@ -20,8 +23,8 @@ Because `thots` are just text *and* so much other stuff online is also just text
 * `/ipfs/QmckHbjMQTww8UaruK8HMxGv9aMGyx2ynFggqg6wQqs19i` can be assumed to be a file of some kind
 * `https://web.archive.org/web/20070625161555im_/http://www.pantspantspants.biz/top-original.jpg` can be assumed to be an image of some kind (but lets be a little careful with location based urls because the thing that's there could change)
 * `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` an address?
-* `http://owise1.guru/a-walk-in-the-park.ic` now here's where things start to get interesting. we can link to, build on, and describe another whole collection of thots.
-*  `/ipfs/QmZYk6ArdhH6AqE3hk1nfDnZf92DZaLHFiZWK8k9opPoSB/orbitdb-zdpuAm8F2GT1fhBto9NYT2AXP8fEfqdoC3K59qwukEZJ4zCmv-Feedback.ic` and here's a collection that will never change. so we can keep using it to connect larger and larger collections like building up DNA. ipfs really lends itself to this because, in theory, the more a file is used, the more likely it is to contunue to exist 
+* `https://yes.aye.si/index.ic` now here's where things start to get interesting. we can link to, build on, and describe another whole collection of thots.
+*  `/ipfs/bafybeifui4lre7es4fay4v6zonrrex2crlrh6ijcopyggl445uny7fuz34/you.ic` and here's a collection that will never change. We can keep using it to connect larger and larger collections like building up DNA, ultimately creating a "knowledge layer" for the universal stack. (See "Pure ICs")[/docs/ic-export.md#pure-ics]
 
 thots are first and foremost by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
 

@@ -50,15 +50,7 @@ ham sandwich
 + /ipfs/bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa
 ```
 
-same thing...
-
-```
-i want that
-+ https://i.imgur.com/EaFwl8Y.gif
-+ /ipfs/bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa
-https://i.imgur.com/EaFwl8Y.gif
-+ /ipfs/bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa
-```
+same thing[^1]
 
 What's cool is that now this piece of information can be combined with every other thing someone wanted in precisely this way. And if you think about it, this tiny piece of data is actually extremely dense with meaning.  You'd need to be from a fairly specific place and time to connect these two things. Aggregating a pool of things connected to this one gif could yield so much about the culture *and* the individuals who saw the world in this way.
 
@@ -171,3 +163,12 @@ We can combine any number of disperate thoughts together and then place somethin
 
  Let's address the elephant in the room.  Are we about to unwittingly unleash the sentient machine that ends all human suffering by removing the source? I *kinda* doubt it, but it's probably worth considering.
 
+
+[^1]:
+	```
+	i want that
+	+ https://i.imgur.com/EaFwl8Y.gif
+	+ /ipfs/bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa
+	https://i.imgur.com/EaFwl8Y.gif
+	+ /ipfs/bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa
+	```

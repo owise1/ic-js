@@ -20,15 +20,48 @@ Every new splooge of tech needs a dumb word and this is ours.  But don't worry, 
 Because `thots` are just text *and* so much other stuff online is also just text, `thots` can also represent those online things. For example:
 
 * `@owise1` can be assumed to be a social media handle of some kind. at least these days.
-* `/ipfs/QmckHbjMQTww8UaruK8HMxGv9aMGyx2ynFggqg6wQqs19i` can be assumed to be a file of some kind
 * `https://web.archive.org/web/20070625161555im_/http://www.pantspantspants.biz/top-original.jpg` can be assumed to be an image of some kind (but lets be a little careful with location based urls because the thing that's there could change)
-* `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` an address?
+* `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` an public address, an NFT?
 * `https://yes.aye.si/index.ic` now here's where things start to get interesting. we can link to, build on, and describe another whole collection of thots.
-*  `/ipfs/bafybeifui4lre7es4fay4v6zonrrex2crlrh6ijcopyggl445uny7fuz34/you.ic` and here's a collection that will never change. We can keep using it to connect larger and larger collections like building up DNA, ultimately creating a "knowledge layer" for the universal stack. (See "Pure ICs")[/docs/ic-export.md#pure-ics]
+*  `/ipfs/bafybeifui4lre7es4fay4v6zonrrex2crlrh6ijcopyggl445uny7fuz34/you.ic` and here's a collection that will never change. We can keep using it to connect larger and larger collections like building up DNA, ultimately creating a "knowledge layer" for the universal stack. [See "Pure ICs"](/docs/ic-export.md#pure-ics)
 
 thots are first and foremost by humans for humans. They are not facts. In fact, they're not even true. They're not our "digital exhaust". 
 
 Also, if it makes you more comfortable, you can just call them "tags". We're old.
+
+### a thot experiment
+
+
+Here's an example. Sometimes, when I see something I want I literally think:
+
+!["i want that"](https://bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa.ipfs.nftstorage.link/)
+
+I hear that voice in my head, vaguely imagine this scene from Napoleon Dynamite and, depending on who's around, I may even attempt to immitate this character. Online I might react with this gif. If the object of my desire was, say, a ham sandwich I could represent that like:
+
+```
+ham sandwich
++ https://i.imgur.com/EaFwl8Y.gif
+```
+
+or, if I were worried about the longevity of the imgur.com service...
+
+```
+ham sandwich
++ /ipfs/bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa
+```
+
+same thing...
+
+```
+i want that
++ https://i.imgur.com/EaFwl8Y.gif
++ /ipfs/bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa
+https://i.imgur.com/EaFwl8Y.gif
++ /ipfs/bafybeig7xsqsxnp57xvxmksnihhkjz5ll5v6rslgnqsbolpr2x5atgg7fa
+```
+
+What's cool is that now this piece of information can be combined with every other thing someone wanted in precisely this way. And if you think about it, this tiny piece of data is actually extremely dense with meaning.  You'd need to be from a fairly specific place and time to connect these two things. Aggregating a pool of things connected to this one gif could yield so much about the culture *and* the individuals who saw the world in this way.
+
 
 ## Perspectives
 

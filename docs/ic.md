@@ -21,7 +21,7 @@ Because `thots` are just text *and* so much other stuff online is also just text
 
 * `@owise1` can be assumed to be a social media handle of some kind. at least these days.
 * `https://web.archive.org/web/20070625161555im_/http://www.pantspantspants.biz/top-original.jpg` can be assumed to be an image of some kind (but lets be a little careful with location based urls because the thing that's there could change)
-* `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` an public address, an NFT?
+* `0xed9bc30ffd85ace691fcbcd9487b37ca7818c072` a public address, an NFT?
 * `https://yes.aye.si/index.ic` now here's where things start to get interesting. we can link to, build on, and describe another whole collection of thots.
 *  `/ipfs/bafybeifui4lre7es4fay4v6zonrrex2crlrh6ijcopyggl445uny7fuz34/you.ic` and here's a collection that will never change. We can keep using it to connect larger and larger collections like building up DNA, ultimately creating a "knowledge layer" for the universal stack. [See "Pure ICs"](/docs/ic-export.md#pure-ics)
 

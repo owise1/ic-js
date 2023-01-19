@@ -208,7 +208,7 @@ class IC extends EventEmitter {
             const pieces = line.split(',')
             time = parseInt(pieces[pieces.length -1], 10)
           }
-          const from = line.replace(/^[+-]/, '').replace(timePieceRegEx, '')
+          const from = IC.clean(line).replace(timePieceRegEx, '')
           await Promise.all(tos.map(async to => {
             await this.tag(to, from, !/^-/.test(line), {
               dId,

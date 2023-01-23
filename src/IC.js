@@ -66,7 +66,7 @@ class IC extends EventEmitter {
       reverse,
       uniqBy(prop('from')),
       reverse,
-      map(tag => `${tag.yesNo}${tag.from}${this.opts.pure ? '' : ',' + tag.time}`),
+      map(tag => `${tag.yesNo}${tag.from}${!this.opts.pure && tag.time ? ',' + tag.time : ''}`),
       _sort,
       join(DELIM)
     )

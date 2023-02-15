@@ -194,7 +194,7 @@ class IC extends EventEmitter {
     }
 
     // import from string
-    let dId = uuidv4()
+    let dId = source || uuidv4()
     let tos = [] 
     let foundTag = false
     const resetTos = () => {

@@ -206,7 +206,7 @@ class IC extends EventEmitter {
           let time
           if (timePieceRegEx.test(line)) {
             const pieces = line.split(',')
-            time = pieces[pieces.length -1] 
+            time = (pieces[pieces.length -1]).trim()
           }
           const from = IC.clean(line).replace(timePieceRegEx, '')
           await Promise.all(tos.map(async to => {

@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require('uuid')
 const EventEmitter = require('./eventemitter')
 const isIPFS = require('is-ipfs')
-const { intersection, concat, filter, sort, identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy, uniqWith } = require('ramda')
+const { uniq, intersection, concat, filter, sort, identity, join, mergeDeepRight, groupBy, prop, toPairs, pipe, map, flatten, reverse, uniqBy, uniqWith } = require('ramda')
 const fetch = require('cross-fetch')
 
 const DELIM = "\n"
@@ -103,7 +103,16 @@ class IC extends EventEmitter {
     }
     return pipe(
       toPairs,
-      map(arr => `${opts.pure ? '' : '_'}${DELIM}${formatPerspective(arr[1])}`),
+      map(arr => {
+        let start = '_'
+        const firstTag = arr[1][0]
+        if (opts.pure) {
+          start = ''
+        } else if (firstTag) {
+          start = `_${firstTag.dId}`
+        }
+        return `${start}${DELIM}${formatPerspective(arr[1])}`
+      }),
       _sort,
       join(DELIM)
     )(byDIds)
@@ -146,9 +155,6 @@ class IC extends EventEmitter {
   async import (str, source) {
     if (!str) return false
     const lines = str.split(DELIM).filter(line => !/^\/\//.test(line) && IC.clean(line))
-    if (!source) {
-      source = this.id
-    }
 
     // perhaps we're importing from somehwere else
     if (lines.length === 1) {
@@ -197,7 +203,7 @@ class IC extends EventEmitter {
     }
     return Promise.all(lines.map(async line => {
       if (/^_/.test(line)) {
-        dId = line.replace(/^_/, '') || uuidv4()
+        dId = line.replace(/^_/, '') || source || uuidv4()
         resetTos()
       } else if (/^[+-]/.test(line)) {
         foundTag = true
@@ -212,7 +218,7 @@ class IC extends EventEmitter {
           await Promise.all(tos.map(async to => {
             await this.tag(to, from, !/^-/.test(line), {
               dId,
-              source,
+              source: source || this.id,
               time
             })
           }))
@@ -260,21 +266,40 @@ class IC extends EventEmitter {
 
   findTagged (parents = [], opts = {}) {
     const all = this.all({ flatten: true })
+    const options = Object.assign({
+      ic: false
+    }, opts)
     let ret 
     while (parents.length > 0) {
       const parent = parents.shift()
-      const children = all.filter(t => t.to === parent && t.yesNo !== '-')
-      const tags = children.map(t => t.from)
-      if (!ret) {
-        ret = tags
+      if (options.ic) {
+        const children = all.filter(t => t.to === parent)
+        if (!ret) {
+          ret = children 
+        } else {
+          ret = concat(ret, children)
+        }
+
       } else {
-        ret = intersection(ret, tags) 
-      }
-      if (ret.length === 0) {
-        return []
+        const children = all.filter(t => t.to === parent && t.yesNo !== '-')
+        const tags = children.map(t => t.from)
+        if (!ret) {
+          ret = tags
+        } else {
+          ret = intersection(ret, tags) 
+        }
+        if (ret.length === 0) {
+          break
+        }
       }
     }
-    return ret
+    if (options.ic) {
+      const ic = new IC
+      ic.tags = ret 
+      return ic
+    } else {
+      return uniq(ret)
+    }
   }
 
   static clean (str) {

@@ -2,7 +2,7 @@
 
 > you know how sometimes you're like "this is like that" and "that is like this"? well, this is like that
 
-IC is an extremely simple text format designed for creating meaning. It's an easy way to collect, share, and connect our associations, perceptions, and thoughts. Here I'll teach you:
+IC is an extremely simple text format designed for creating meaning. It's a simple way to collect, share, and connect our associations, perceptions, and thoughts. Here I'll teach you:
 
 ```
 Intelligence Collective
@@ -23,7 +23,7 @@ Intelligence Collective
 
 IC is designed for humans first and the internet second. As opposed to HTML, which combines UI, content and application logic, IC is so easy to use because it's only for one thing: recording what someone thinks. The syntax is basically just a `+`, a `-`, the `enter` key, and however you already talk. This makes it so literally anyone can contribute knowledge.  That simple syntax also makes it easy to build for and work with. 
 
- Think of an index.ic sitting right alongside your index.html file representing what the website owner thinks and linking to other ICs on the internet that they endorse, like a link list for perspectives.  IC files on internet allow us to create truly decentralized and personalized knowledge webs at any scale, without having to rely on large corporations, complex search algorithms or expensive processing power.
+ Imagine an index.ic sitting right alongside your index.html file representing what the website owner thinks and linking to other ICs on the internet that they endorse, like a link list for perspectives.  IC files on the internet allow us to create truly decentralized and personalized knowledge webs at any scale, without having to rely on large corporations, complex search algorithms or expensive processing power.
 
  There is a lot to talk about. Continue here...
 
@@ -60,8 +60,11 @@ This is a javascript implementation of IC built to be stored in memory and exter
 
 Eventually we'll amass enormous collections of thots managed and curated by different groups for different reasons.  "Seeding" is an approach to interacting with these unweildy data sets.  When we seed we use a small collection of our own and pull in only the thots from the larger set that are explicitly mentioned in ours and their ancestors. Like seeding a cloud.
 
-### ic.findTagged(['parent tags'])
-> returns an array of all children with all given parents
+### ic.findTagged(['parent tags'], opts = {})
+> by default returns an array of all children with all given parents
+
+This is useful for quickly finding the intersection of multiple tags.  Add the `ic` option for a new IC object containing only the parent child connections
+
 
 ## Static
 

@@ -13,3 +13,10 @@ name
 fun names
 + my old name
 + useful for testing
+findTagged
++ can also return an IC object
++ useful for testing
+_another perspective
+findTagged
++ can also return an IC object
+- useful for testing

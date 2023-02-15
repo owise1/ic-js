@@ -202,11 +202,11 @@ class IC extends EventEmitter {
       } else if (/^[+-]/.test(line)) {
         foundTag = true
         if (tos.length > 0) {
-          const timePieceRegEx = /,\d+$/
+          const timePieceRegEx = /,[0-9.]+$/
           let time
           if (timePieceRegEx.test(line)) {
             const pieces = line.split(',')
-            time = parseInt(pieces[pieces.length -1], 10)
+            time = pieces[pieces.length -1] 
           }
           const from = IC.clean(line).replace(timePieceRegEx, '')
           await Promise.all(tos.map(async to => {

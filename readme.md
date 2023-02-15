@@ -13,7 +13,8 @@ Intelligence Collective
 + a new medium 
 + a new demographics 
 + internet primitive
-+ pools not streams
++ ponds
+- streams
 - hard to learn 
 + thoughts
 - html

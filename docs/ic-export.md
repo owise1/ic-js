@@ -39,7 +39,15 @@ First position in line
 
 End of line (optional)
 
-* `,` a single number. It could be js time, or a count if you're consolidating, or...
+* `,` digits and `.`s - I'm calling this the "timepart" rn. It is usually used for a js timestamp, but can also be used to store more info. for example:
+
+```
+the timepart can be used to
++ store the time a tag was created,1676486294449
++ an aggregation from multiple .ics,45.12 
++ something insane like base 10 representations of data,23.45.13.245
++ anything that only uses digits and a dot
+```
 
 ## External ICs
 

@@ -19,7 +19,19 @@ describe('Seeding', function () {
     })
     it('returns only tags connected to seeds', function () {
       const newIc = ic.seed(['icfs'])
+      assert(newIc.all().length === 4)
+    })
+    it('honors depth option', function () {
+      const newIc = ic.seed(['icfs'], { depth: 1 })
+      assert(newIc.all().length === 1)
+    })
+    it('honors depth option 2', function () {
+      const newIc = ic.seed(['icfs'], { depth: 2 })
       assert(newIc.all().length === 3)
+    })
+    it('honors depth option alot', function () {
+      const newIc = ic.seed(['icfs'], { depth: 102 })
+      assert(newIc.all().length === 4)
     })
   })
 })

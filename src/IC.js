@@ -240,13 +240,17 @@ class IC extends EventEmitter {
     }))
   }
 
-  seed (tags = []) {
+  seed (tags = [], opts = {}) {
     const ic = new IC
+    const options = Object.assign({
+      depth: -1
+    }, opts)
     ic.id = this.id
     const tagsForSeeds = seeds => this.tags.filter(t => seeds.includes(t.to) || seeds.includes(t.from))
     let usedSeeds = []
     let seeds = []
     let newSeeds = []
+    let d = 0
     do {
       usedSeeds = usedSeeds.concat(tags)
       seeds = pipe(
@@ -259,7 +263,8 @@ class IC extends EventEmitter {
         filter(t => !usedSeeds.includes(t))
       ) (seeds)
       tags = newSeeds
-    } while (newSeeds.length > 0)
+      d++
+    } while (newSeeds.length > 0 && (options.depth === -1 || d < options.depth))
     ic.tags = seeds
     return ic
   }

@@ -55,16 +55,19 @@ This is a javascript implementation of IC built to be stored in memory and exter
 ### async ic.refresh()
 > re-fetches external ICs
 
-### ic.seed(['seed tags'])
+### ic.seed(['seed tags'], opts = { depth: -1 })
 > returns a new IC containing only tags connected to your seed tags
+
+by default it will take everything connected to everything connected to....the seeds tags. adding `opts.depth = 1` will only go one step out from the seeds in either direction
 
 Eventually we'll amass enormous collections of thots managed and curated by different groups for different reasons.  "Seeding" is an approach to interacting with these unweildy data sets.  When we seed we use a small collection of our own and pull in only the thots from the larger set that are explicitly mentioned in ours and their ancestors. Like seeding a cloud.
 
 ### ic.findTagged(['parent tags'], opts = {})
 > by default returns an array of all children with all given parents
 
-This is useful for quickly finding the intersection of multiple tags.  Add the `ic` option for a new IC object containing only the parent child connections
+This is useful for quickly finding the intersection of multiple tags.  
 
+Add the `ic` option for a new IC object containing only the parent child connections
 
 ## Static
 

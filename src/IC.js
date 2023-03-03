@@ -313,8 +313,12 @@ class IC extends EventEmitter {
 
   static isIcUrl (str) {
     const domain = str.replace(/^https?:\/\//g, '')
-    return (/^.+\.[^.]{2,3}\//.test(domain) || /^localhost/.test(domain)) && /\.ic$/.test(str)
+    return (/^.+\.[^.]{2,3}\//.test(domain) || /^localhost/.test(domain)) && /\.ic$/.test(str.split('?')[0])
   }
+}
+IC.create = (opts = {}) => {
+  const ic = new IC(opts)
+  return ic
 }
 IC.sort = sort((a = '', b = '') => {
   return a.localeCompare(b)

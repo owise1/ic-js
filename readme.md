@@ -1,5 +1,7 @@
 # Intelligence Collective (text/ic)
 
+> **Note:** This repository is no longer maintained. The documentation has been moved to its new home at [ic-docs](https://github.com/ic-caves/ic-docs).
+
 > you know how sometimes you're like "this is like that" and "that is like this"? well, this is like that
 
 
